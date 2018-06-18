@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Adward Zeng" />
+
+
+
+<meta name="description" content="本文内容从CSDN博客迁移过来，原博地址：https://blog.csdn.net/manmandong123/article/details/79199686。由于有些内容可能会看起来有点混乱，后期会整理">
+<meta name="keywords" content="BootStrap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BootStrap，使用过程中的一些get点（个人向）">
+<meta property="og:url" content="www.adwardx.top/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/index.html">
+<meta property="og:site_name" content="Panda没有黑眼圈">
+<meta property="og:description" content="本文内容从CSDN博客迁移过来，原博地址：https://blog.csdn.net/manmandong123/article/details/79199686。由于有些内容可能会看起来有点混乱，后期会整理">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/images/pasted-7.png">
+<meta property="og:image" content="http://img.blog.csdn.net/20180210140336930?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="http://img.blog.csdn.net/20180210141043383?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="http://img.blog.csdn.net/20180211181233311?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="http://img.blog.csdn.net/20180211230230390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/1000/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="http://img.blog.csdn.net/20180211232218231?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/1200/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-06-18T03:21:46.435Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BootStrap，使用过程中的一些get点（个人向）">
+<meta name="twitter:description" content="本文内容从CSDN博客迁移过来，原博地址：https://blog.csdn.net/manmandong123/article/details/79199686。由于有些内容可能会看起来有点混乱，后期会整理">
+<meta name="twitter:image" content="/images/pasted-7.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Panda没有黑眼圈" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>BootStrap，使用过程中的一些get点（个人向） | Panda没有黑眼圈</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56ff76c972fc0cf9"></script>
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Adward Zeng</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:adwardzx@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/ZengX2017" title="GitHub"></a>
+                            
+                                <a class="fa SegmentFault" href="https://segmentfault.com/u/adward_z" title="SegmentFault"></a>
+                            
+                                <a class="fa CSDN" href="https://blog.csdn.net/manmandong123" title="CSDN"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PM2/">PM2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/ZengX2017/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">Panda没有黑眼圈</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Adward Zeng</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Adward Zeng</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:adwardzx@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/ZengX2017" title="GitHub"></a>
+                            
+                                <a class="fa SegmentFault" target="_blank" href="https://segmentfault.com/u/adward_z" title="SegmentFault"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/manmandong123" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-BootStrap，使用过程中的一些get点（个人向）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/" class="article-date">
+      <time datetime="2018-03-05T06:35:00.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      BootStrap，使用过程中的一些get点（个人向）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BootStrap/">BootStrap</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-7.png" alt="想不到吧"></excerpt></p>
+<p>本文内容从CSDN博客迁移过来，原博地址：<a href="https://blog.csdn.net/manmandong123/article/details/79199686。" target="_blank" rel="noopener">https://blog.csdn.net/manmandong123/article/details/79199686。</a><br>由于有些内容可能会看起来有点混乱，后期会整理<a id="more"></a></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""><br><strong>更新提醒</strong></the></p>
+<blockquote>
+<p><font color="red">从现在开始2018年3月3日会对更新时间和内容进行介绍</font></p>
+<ol>
+<li><font color="black">2018年3月5日 14点35分</font> ——-&gt; 十、8小点（<font color="blue">timelinejs</font>）进行了添加（新增的插件） <a href="http://blog.csdn.net/manmandong123/article/details/79199686/#10.8" target="_blank" rel="noopener">点击跳转</a></li>
+<li><font color="black">2018年3月5日 17点29分</font> ——-&gt; 十、8小点（<font color="blue">timelinejs</font>）进行了删除</li>
+<li><font color="black">2018年3月9日 18点12分</font> ——-&gt; 十、8小点（<font color="blue">printThis</font>）进行了添加 <a href="http://blog.csdn.net/manmandong123/article/details/79199686/#10.8" target="_blank" rel="noopener">点击跳转</a></li>
+</ol>
+</blockquote>
+<h1 id="导航栏窗口定制"><a href="#导航栏窗口定制" class="headerlink" title="导航栏窗口定制"></a>导航栏窗口定制</h1><blockquote>
+<p><a href="https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3" target="_blank" rel="noopener">https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3</a><br>此回答下有导航栏窗口定制的网站</p>
+<blockquote>
+<p><a href="https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0" target="_blank" rel="noopener">https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0</a></p>
+</blockquote>
+</blockquote>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><blockquote>
+<p><a href="https://fontawesome.com/icons?d=gallery" target="_blank" rel="noopener">https://fontawesome.com/icons?d=gallery</a><br><a href="http://www.bootcdn.cn/" target="_blank" rel="noopener">http://www.bootcdn.cn/</a><br><a href="https://icons8.com/icon/set/weixin/all" target="_blank" rel="noopener">https://icons8.com/icon/set/weixin/all</a></p>
+</blockquote>
+<h1 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h1><blockquote>
+<p><a href="http://blog.csdn.net/shiquanqq/article/details/48786701" target="_blank" rel="noopener">http://blog.csdn.net/shiquanqq/article/details/48786701</a></p>
+</blockquote>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><blockquote>
+<p><strong>创建bootstrap-markdown.js</strong><br><br></p>
+<blockquote>
+<p> <a href="https://github.com/toopay/bootstrap-markdown" target="_blank" rel="noopener">https://github.com/toopay/bootstrap-markdown</a><br><a href="http://blog.csdn.net/hai4321/article/details/75204267" target="_blank" rel="noopener">http://blog.csdn.net/hai4321/article/details/75204267</a></p>
+</blockquote>
+<p><strong>使用文档</strong><br><a href="http://www.codingdrama.com/bootstrap-markdown/" target="_blank" rel="noopener">http://www.codingdrama.com/bootstrap-markdown/</a></p>
+</blockquote>
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><blockquote>
+<p><a href="https://bootswatch.com/3/" target="_blank" rel="noopener">https://bootswatch.com/3/</a></p>
+</blockquote>
+<h1 id="上传控件"><a href="#上传控件" class="headerlink" title="上传控件"></a>上传控件</h1><blockquote>
+<p><a href="https://github.com/kartik-v/bootstrap-fileinput/wiki/12.-%E4%B8%80%E4%BA%9B%E6%A0%B7%E4%BE%8B%E4%BB%A3%E7%A0%81#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95" target="_blank" rel="noopener">https://github.com/kartik-v/bootstrap-fileinput/wiki/12.-%E4%B8%80%E4%BA%9B%E6%A0%B7%E4%BE%8B%E4%BB%A3%E7%A0%81#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95</a></p>
+</blockquote>
+<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><blockquote>
+<p><a href="http://www.bootcdn.cn/" target="_blank" rel="noopener">http://www.bootcdn.cn/</a></p>
+</blockquote>
+<h1 id="所用插件"><a href="#所用插件" class="headerlink" title="所用插件"></a>所用插件</h1><blockquote>
+<p>1.datatables</p>
+<blockquote>
+<ul>
+<li>github：<a href="https://github.com/ssy341/datatables-cn/issues/21" target="_blank" rel="noopener">https://github.com/ssy341/datatables-cn/issues/21</a></li>
+<li>官网：<a href="http://datatables.club/example/" target="_blank" rel="noopener">http://datatables.club/example/</a></li>
+<li>其他：<a href="http://www.cnblogs.com/hubing/p/4491308.html" target="_blank" rel="noopener">http://www.cnblogs.com/hubing/p/4491308.html</a></li>
+<li>其他：<a href="http://www.cnblogs.com/zhoujie/p/js3.html" target="_blank" rel="noopener">http://www.cnblogs.com/zhoujie/p/js3.html</a></li>
+</ul>
+</blockquote>
+<p>2.jquery-datatables-editable</p>
+<blockquote>
+<ul>
+<li>官网：<a href="https://editor.datatables.net/examples/inline-editing/simple" target="_blank" rel="noopener">https://editor.datatables.net/examples/inline-editing/simple</a></li>
+</ul>
+</blockquote>
+<p>3.sweet-alert</p>
+<blockquote>
+<ul>
+<li>官网：<a href="https://lipis.github.io/bootstrap-sweetalert/" target="_blank" rel="noopener">https://lipis.github.io/bootstrap-sweetalert/</a><br>由于无法根据获取的id来删除内容，故打算制造删除的提示框的想法取消</li>
+</ul>
+</blockquote>
+<p>4.bootstrap-fileinput</p>
+<blockquote>
+<ul>
+<li>官网：<a href="https://github.com/kartik-v/bootstrap-fileinput" target="_blank" rel="noopener">https://github.com/kartik-v/bootstrap-fileinput</a></li>
+<li>其他：<a href="http://www.os373.cn/article/81" target="_blank" rel="noopener">http://www.os373.cn/article/81</a></li>
+<li>其他：<a href="http://blog.csdn.net/qq_28550739/article/details/53436080" target="_blank" rel="noopener">http://blog.csdn.net/qq_28550739/article/details/53436080</a></li>
+<li>其他：<a href="http://blog.csdn.net/u012526194/article/details/69937741" target="_blank" rel="noopener">http://blog.csdn.net/u012526194/article/details/69937741</a></li>
+</ul>
+</blockquote>
+<p>5.summernote</p>
+<blockquote>
+<ul>
+<li>官网：<a href="https://summernote.org/" target="_blank" rel="noopener">https://summernote.org/</a></li>
+<li>其他：<a href="http://blog.csdn.net/wang404838334/article/details/78449191（前端显示）" target="_blank" rel="noopener">http://blog.csdn.net/wang404838334/article/details/78449191（前端显示）</a><br><img src="http://img.blog.csdn.net/20180210140336930?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="看这里"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">     &lt;div class=&quot;panel panel-default m-t-20&quot;&gt;</span><br><span class="line">	 &lt;div class=&quot;panel-body&quot;&gt;</span><br><span class="line">	          &#123;% for v in page_data %&#125;</span><br><span class="line">	          &lt;div id=&quot;summer&quot;&gt; &lt;/div&gt;</span><br><span class="line">              &lt;input type=&quot;hidden&quot; value=&quot;&#123;&#123; v.content &#125;&#125;&quot; id=&quot;article_content&quot;&gt;</span><br><span class="line">	          &#123;% endfor %&#125;</span><br><span class="line">	&lt;/div&gt; &lt;!-- panel-body --&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<pre><code>script部分：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">     jQuery(document).ready(function () &#123;</span><br><span class="line">         var innerhtml = $(&quot;#article_content&quot;).val();</span><br><span class="line">         $(&quot;#summer&quot;).html(innerhtml);</span><br><span class="line">    &#125;);</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+ 本部分代码为从数据库中将带有标签的内容正确读取
+</code></pre><blockquote>
+<blockquote>
+<p><img src="http://img.blog.csdn.net/20180210141043383?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="看这里"></p>
+</blockquote>
+<p> 6 bootstrap-datepicker</p>
+<blockquote>
+<ul>
+<li>github：<a href="http://bootstrap-datepicker.readthedocs.io/en/latest/markup.html" target="_blank" rel="noopener">http://bootstrap-datepicker.readthedocs.io/en/latest/markup.html</a></li>
+</ul>
+</blockquote>
+<p> 7 bootstrap-datetimepicker</p>
+<blockquote>
+<ul>
+<li>github：<a href="https://github.com/smalot/bootstrap-datetimepicker" target="_blank" rel="noopener">https://github.com/smalot/bootstrap-datetimepicker</a></li>
+<li>其他：<a href="http://www.bootcss.com/p/bootstrap-datetimepicker/" target="_blank" rel="noopener">http://www.bootcss.com/p/bootstrap-datetimepicker/</a></li>
+<li>其他：<a href="https://www.malot.fr/bootstrap-datetimepicker/demo.php" target="_blank" rel="noopener">https://www.malot.fr/bootstrap-datetimepicker/demo.php</a></li>
+</ul>
+</blockquote>
+<p> 8 <span id="10.8"><font color="black">printThis</font></span></p>
+<blockquote>
+<ul>
+<li>github：<a href="https://github.com/jasonday/printThis" target="_blank" rel="noopener">https://github.com/jasonday/printThis</a></li>
+</ul>
+</blockquote>
+</blockquote>
+<h1 id="级联菜单的问题"><a href="#级联菜单的问题" class="headerlink" title="级联菜单的问题"></a>级联菜单的问题</h1><blockquote>
+<p><img src="http://img.blog.csdn.net/20180211181233311?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+</blockquote>
+<font color="red">解决了三层级联的问题，由于之前误以为wtf-form表单的下拉选择框支持级联，后来发现渲染前端标签的时候，数据无法及时获取。因此，在forms.py中将下拉框改成了stringfield，设置隐藏属性，用前端js的三层级联框将数据根据id赋值给form.xxx。以此解决了三层级联的数据问题</font>
+
+<blockquote>
+<p><br><br>部分代码如下：</p>
+</blockquote>
+<font color="blue">forms.py</font>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">province = StringField(</span><br><span class="line">        description=&quot;省&quot;,</span><br><span class="line">        render_kw=&#123;</span><br><span class="line">            &quot;class&quot;: &quot;form-control&quot;,</span><br><span class="line">            &quot;id&quot;: &quot;hidden-province&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;hidden&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p><font color="blue">xxx.html</font><br><img src="http://img.blog.csdn.net/20180211230230390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/1000/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20180211232218231?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFubWFuZG9uZzEyMw==/font/5a6L5L2T/fontsize/1200/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<p>用Jquery的val()方法给隐藏的province赋值。同时一定要注意在html后赋值。</p>
+<h1 id="需要注意的点"><a href="#需要注意的点" class="headerlink" title="需要注意的点"></a>需要注意的点</h1><ol>
+<li><font color="red">没弄懂scss之前，拒绝用带有scss的样式</font></li>
+<li>min.css和.css还是有很区别的</li>
+</ol>
+<blockquote>
+<p>参考网站：</p>
+<ol>
+<li><a href="http://www.cnblogs.com/zhangyongl/p/6912050.html" target="_blank" rel="noopener">http://www.cnblogs.com/zhangyongl/p/6912050.html</a></li>
+<li><a href="http://blog.csdn.net/zhongqiushen/article/details/79163406" target="_blank" rel="noopener">http://blog.csdn.net/zhongqiushen/article/details/79163406</a></li>
+</ol>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
+        <p><span>发布时间:</span>2018-03-05, 14:35:00</p>
+        <p><span>最后更新:</span>2018-06-17, 23:21:46</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/" title="BootStrap，使用过程中的一些get点（个人向）">www.adwardx.top/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/06/14/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#导航栏窗口定制"><span class="toc-number">1.</span> <span class="toc-text">导航栏窗口定制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图标"><span class="toc-number">2.</span> <span class="toc-text">图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标签页"><span class="toc-number">3.</span> <span class="toc-text">标签页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown"><span class="toc-number">4.</span> <span class="toc-text">markdown</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主题"><span class="toc-number">5.</span> <span class="toc-text">主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#上传控件"><span class="toc-number">6.</span> <span class="toc-text">上传控件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CDN"><span class="toc-number">7.</span> <span class="toc-text">CDN</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#所用插件"><span class="toc-number">8.</span> <span class="toc-text">所用插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#级联菜单的问题"><span class="toc-number">9.</span> <span class="toc-text">级联菜单的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#需要注意的点"><span class="toc-number">10.</span> <span class="toc-text">需要注意的点</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/06/14/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/To-do-list/">To do list</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Hexo/">VPS与Hexo不得不说的那些事之四——安装Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Node-js/">VPS与Hexo不得不说的那些事之二——安装Node.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Git/">VPS与Hexo不得不说的那些事之一——安装Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/搭建Hexo/">VPS与Hexo不得不说的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/idea一些操作（个人记录）/">idea一些操作（个人记录）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018 Adward Zeng
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
