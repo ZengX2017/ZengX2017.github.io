@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>新成员你好——来必力</title>
+      <link href="/2018/06/19/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9D%A5%E5%BF%85%E5%8A%9B/"/>
+      <url>/2018/06/19/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9D%A5%E5%BF%85%E5%8A%9B/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/来必力.png" alt="来必力"><br>自<font color="red">Disqus</font>、<font color="red">多说</font>、<font color="red">有言</font>相继不能使用后，简单可用的评论系统寥寥无几，在此，使用<a href="http://www.laibili.com.cn/" target="_blank" rel="noopener">来必力</a>集成本站的评论系统。<font color="blue">使用主题：yelee</font><br><a id="more"></a></excerpt></p><the rest="" of="" contents="" |="" 余下全文=""><h1 id="注册账号获取uid"><a href="#注册账号获取uid" class="headerlink" title="注册账号获取uid"></a>注册账号获取uid</h1><p>打开来必力官网： <a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a> , 注册账号。成功之后，点击安装</p><p><img src="/images/laibili_1.png" alt="laibili_01"></p><p>此时，进入安装代码界面，记录好<font color="red">uid</font>（打马赛克部分）</p><p><img src="/images/laibili_02.png" alt="laibili_02"></p><h1 id="将来必力代码集成到主题中"><a href="#将来必力代码集成到主题中" class="headerlink" title="将来必力代码集成到主题中"></a>将来必力代码集成到主题中</h1><h2 id="主题站点添加uid"><a href="#主题站点添加uid" class="headerlink" title="主题站点添加uid"></a>主题站点添加uid</h2><p>打开theme/yelee/_config.yml，添加如下的配置信息：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">livere:</span><br><span class="line">   on: true</span><br><span class="line">       livere_uid: uid</span><br></pre></td></tr></table></figure></p><p>如图：</p><p><img src="/images/laibili_03.png" alt="laibili_03"></p><h2 id="创建评论-ejs-文件"><a href="#创建评论-ejs-文件" class="headerlink" title="创建评论 ejs 文件"></a>创建评论 ejs 文件</h2><p>在<code>themes/yelee/layout/_partial/comments</code>文件夹创建<code>livere.ejs</code>文件，拷贝上图的代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;section class=&quot;livere&quot; id=&quot;comments&quot;&gt;</span><br><span class="line">    &lt;!-- 来必力City版安装代码 --&gt;</span><br><span class="line">    &lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;Your uid&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">   (function(d, s) &#123;</span><br><span class="line">       var j, e = d.getElementsByTagName(s)[0];</span><br><span class="line"></span><br><span class="line">       if (typeof LivereTower === &apos;function&apos;) &#123; return; &#125;</span><br><span class="line"></span><br><span class="line">       j = d.createElement(s);</span><br><span class="line">       j.src = &apos;https://cdn-city.livere.com/js/embed.dist.js&apos;;</span><br><span class="line">       j.async = true;</span><br><span class="line"></span><br><span class="line">       e.parentNode.insertBefore(j, e);</span><br><span class="line">       &#125;)(document, &apos;script&apos;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">    &lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;/noscript&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- City版安装代码已完成 --&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure></p><h2 id="配置文章内的评论部分内容"><a href="#配置文章内的评论部分内容" class="headerlink" title="配置文章内的评论部分内容"></a>配置文章内的评论部分内容</h2><p>打开<code>themes/yelee/layout/_partial/article.ejs</code>,添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;% &#125; else if (theme.livere.on) &#123; %&gt;</span><br><span class="line">       &lt;%- partial(&apos;comments/livere&apos;) %&gt;</span><br></pre></td></tr></table></figure></p><p>如图：<br><img src="/images/laibili_04.png" alt="laibili_04"></p><p>至此，来必力评论系统安装成功。欢迎使用此评论系统对我的文章进行指导建议，或者在留言板上进行留言。界面如下：</p><p><img src="/images/laibili_05.png" alt="laibili_05"></p><div style="text-align: center"><img src="/images/pasted-23.png" alt="稳"></div><blockquote><p>参考文章：<br><a href="https://www.jianshu.com/p/f5c184047e72" target="_blank" rel="noopener">https://www.jianshu.com/p/f5c184047e72</a></p></blockquote></the>]]></content>
+      
+      <categories>
+          
+          <category> 小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 其他 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>一些Tips</title>
       <link href="/2018/06/18/%E4%B8%80%E4%BA%9BTips/"/>
       <url>/2018/06/18/%E4%B8%80%E4%BA%9BTips/</url>
