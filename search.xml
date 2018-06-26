@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>从入门到放弃之——Nginx学习笔记</title>
+      <link href="/2018/06/26/%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%E4%B9%8B%E2%80%94%E2%80%94Nginx/"/>
+      <url>/2018/06/26/%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%E4%B9%8B%E2%80%94%E2%80%94Nginx/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/从入门到放弃.png" alt="从入门到放弃"><br>在空闲时间总不能啥都不干吧！来，去敲敲Nginx的大门吧。<a id="more"></a></excerpt></p><the rest="" of="" contents="" |="" 余下全文=""><h1 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><p>要么自己在本机搭建一个CentOS的虚拟环境（<font color="red">趁还能学生价买，我选择买一个</font>)，我的环境为CentOS7.3</p><h1 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h1><h2 id="安装gcc与pcre等依赖包"><a href="#安装gcc与pcre等依赖包" class="headerlink" title="安装gcc与pcre等依赖包"></a>安装gcc与pcre等依赖包</h2><pre><code>yum -y install gcc gcc-c++ auto  pcre pcre-devel make automake</code></pre><h2 id="继续安装一些用得到的包"><a href="#继续安装一些用得到的包" class="headerlink" title="继续安装一些用得到的包"></a>继续安装一些用得到的包</h2><pre><code>yum -y install wget httpd-tools vim</code></pre><h2 id="用mkdir-文件夹名创建几个文件夹"><a href="#用mkdir-文件夹名创建几个文件夹" class="headerlink" title="用mkdir+文件夹名创建几个文件夹"></a>用mkdir+文件夹名创建几个文件夹</h2><p><img src="/images/pasted-24.png" alt="opt目录下的几个文件夹"></p><h1 id="Nginx优点"><a href="#Nginx优点" class="headerlink" title="Nginx优点"></a>Nginx优点</h1><ol><li>IO多路复用epoll（<font color="red">我也不懂，到时候去查查资料</font>）</li><li>轻量级（功能模块少、代码模块化）</li><li>CPU亲和</li><li>sendfile</li></ol><blockquote><p>以上操作时间为：2018年6月26日 22点57分</p></blockquote></the>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>新成员你好——来必力</title>
       <link href="/2018/06/19/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9D%A5%E5%BF%85%E5%8A%9B/"/>
       <url>/2018/06/19/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9D%A5%E5%BF%85%E5%8A%9B/</url>
@@ -173,11 +194,11 @@
       
         <tags>
             
+            <tag> Nginx </tag>
+            
             <tag> Git </tag>
             
             <tag> Hexo </tag>
-            
-            <tag> Nginx </tag>
             
             <tag> Node.js </tag>
             

@@ -15,16 +15,21 @@
 
 
 
+<meta name="description" content="在空闲时间总不能啥都不干吧！来，去敲敲Nginx的大门吧。">
+<meta name="keywords" content="Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="To do list">
-<meta property="og:url" content="www.adwardx.top/2018/06/18/To-do-list/index.html">
+<meta property="og:title" content="从入门到放弃之——Nginx学习笔记">
+<meta property="og:url" content="www.adwardx.top/2018/06/26/从入门到放弃之——Nginx/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
+<meta property="og:description" content="在空闲时间总不能啥都不干吧！来，去敲敲Nginx的大门吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-19.png">
-<meta property="og:updated_time" content="2018-06-18T04:05:58.683Z">
+<meta property="og:image" content="/images/从入门到放弃.png">
+<meta property="og:image" content="/images/pasted-24.png">
+<meta property="og:updated_time" content="2018-06-26T14:58:23.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="To do list">
-<meta name="twitter:image" content="/images/pasted-19.png">
+<meta name="twitter:title" content="从入门到放弃之——Nginx学习笔记">
+<meta name="twitter:description" content="在空闲时间总不能啥都不干吧！来，去敲敲Nginx的大门吧。">
+<meta name="twitter:image" content="/images/从入门到放弃.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>To do list | Panda没有黑眼圈</title>
+<title>从入门到放弃之——Nginx学习笔记 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +274,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-To-do-list" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-从入门到放弃之——Nginx" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/18/To-do-list/" class="article-date">
-      <time datetime="2018-06-18T04:04:00.000Z" itemprop="datePublished">2018-06-18</time>
+      <a href="/2018/06/26/从入门到放弃之——Nginx/" class="article-date">
+      <time datetime="2018-06-26T14:29:00.000Z" itemprop="datePublished">2018-06-26</time>
 </a>
 
 
@@ -288,7 +293,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      To do list
+      从入门到放弃之——Nginx学习笔记
     </h1>
   
 
@@ -296,8 +301,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -305,9 +318,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 摘要首页=""><br><img src="/images/pasted-19.png" alt="心态崩了"><a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<h1 id="文章的时间问题"><a href="#文章的时间问题" class="headerlink" title="文章的时间问题"></a>文章的时间问题</h1><h1 id="关于Flask那篇文章的崩溃问题"><a href="#关于Flask那篇文章的崩溃问题" class="headerlink" title="关于Flask那篇文章的崩溃问题"></a>关于Flask那篇文章的崩溃问题</h1>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/从入门到放弃.png" alt="从入门到放弃"><br>在空闲时间总不能啥都不干吧！来，去敲敲Nginx的大门吧。<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h1 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><p>要么自己在本机搭建一个CentOS的虚拟环境（<font color="red">趁还能学生价买，我选择买一个</font>)，我的环境为CentOS7.3</p>
+<h1 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h1><h2 id="安装gcc与pcre等依赖包"><a href="#安装gcc与pcre等依赖包" class="headerlink" title="安装gcc与pcre等依赖包"></a>安装gcc与pcre等依赖包</h2><pre><code>yum -y install gcc gcc-c++ auto  pcre pcre-devel make automake
+</code></pre><h2 id="继续安装一些用得到的包"><a href="#继续安装一些用得到的包" class="headerlink" title="继续安装一些用得到的包"></a>继续安装一些用得到的包</h2><pre><code>yum -y install wget httpd-tools vim
+</code></pre><h2 id="用mkdir-文件夹名创建几个文件夹"><a href="#用mkdir-文件夹名创建几个文件夹" class="headerlink" title="用mkdir+文件夹名创建几个文件夹"></a>用mkdir+文件夹名创建几个文件夹</h2><p><img src="/images/pasted-24.png" alt="opt目录下的几个文件夹"></p>
+<h1 id="Nginx优点"><a href="#Nginx优点" class="headerlink" title="Nginx优点"></a>Nginx优点</h1><ol>
+<li>IO多路复用epoll（<font color="red">我也不懂，到时候去查查资料</font>）</li>
+<li>轻量级（功能模块少、代码模块化）</li>
+<li>CPU亲和</li>
+<li>sendfile</li>
+</ol>
+<blockquote>
+<p>以上操作时间为：2018年6月26日 22点57分</p>
+</blockquote>
+</the>
       
     </div>
     
@@ -315,13 +342,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/18/To-do-list/">To do list</a></p>
+        <p><span>本文标题:</span><a href="/2018/06/26/从入门到放弃之——Nginx/">从入门到放弃之——Nginx学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-18, 00:04:00</p>
-        <p><span>最后更新:</span>2018-06-18, 00:05:58</p>
+        <p><span>发布时间:</span>2018-06-26, 10:29:00</p>
+        <p><span>最后更新:</span>2018-06-26, 10:58:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/18/To-do-list/" title="To do list">www.adwardx.top/2018/06/18/To-do-list/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/18/To-do-list/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/26/从入门到放弃之——Nginx/" title="从入门到放弃之——Nginx学习笔记">www.adwardx.top/2018/06/26/从入门到放弃之——Nginx/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/26/从入门到放弃之——Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -333,16 +360,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/18/一些Tips/">
-                    一些Tips
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">
-                    VPS与Hexo不得不说的那些事之五——其他配置
+                <a href="/2018/06/19/你好，来必力/">
+                    新成员你好——来必力
                 </a>
             </div>
         
@@ -354,7 +375,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#文章的时间问题"><span class="toc-number">1.</span> <span class="toc-text">文章的时间问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Flask那篇文章的崩溃问题"><span class="toc-number">2.</span> <span class="toc-text">关于Flask那篇文章的崩溃问题</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#云服务器"><span class="toc-number">1.</span> <span class="toc-text">云服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#相关配置"><span class="toc-number">2.</span> <span class="toc-text">相关配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装gcc与pcre等依赖包"><span class="toc-number">2.1.</span> <span class="toc-text">安装gcc与pcre等依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#继续安装一些用得到的包"><span class="toc-number">2.2.</span> <span class="toc-text">继续安装一些用得到的包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用mkdir-文件夹名创建几个文件夹"><span class="toc-number">2.3.</span> <span class="toc-text">用mkdir+文件夹名创建几个文件夹</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx优点"><span class="toc-number">3.</span> <span class="toc-text">Nginx优点</span></a></li></ol>
         
     </div>
     <style>
@@ -420,15 +441,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/18/一些Tips/" title="上一篇: 一些Tips">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/" title="下一篇: VPS与Hexo不得不说的那些事之五——其他配置">
+            <a href="/2018/06/19/你好，来必力/" title="下一篇: 新成员你好——来必力">
                 <i class="fa fa-angle-right"></i>
             </a>
         
