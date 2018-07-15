@@ -15,22 +15,21 @@
 
 
 
-<meta name="description" content="本文主要讲述安装Nginx">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="本文将统计遇到的一些小问题">
+<meta name="keywords" content="问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta property="og:url" content="www.adwardx.top/2018/06/17/安装Nginx/index.html">
+<meta property="og:title" content="嘿，我们都在这里——一些小问题解决合辑">
+<meta property="og:url" content="www.adwardx.top/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
-<meta property="og:description" content="本文主要讲述安装Nginx">
+<meta property="og:description" content="本文将统计遇到的一些小问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-16.png">
-<meta property="og:image" content="/images/pasted-2.png">
-<meta property="og:image" content="/images/pasted-3.png">
-<meta property="og:updated_time" content="2018-06-18T03:28:02.366Z">
+<meta property="og:image" content="/images/here.png">
+<meta property="og:image" content="/images/pasted-22.png">
+<meta property="og:updated_time" content="2018-07-14T08:09:55.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta name="twitter:description" content="本文主要讲述安装Nginx">
-<meta name="twitter:image" content="/images/pasted-16.png">
+<meta name="twitter:title" content="嘿，我们都在这里——一些小问题解决合辑">
+<meta name="twitter:description" content="本文将统计遇到的一些小问题">
+<meta name="twitter:image" content="/images/here.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VPS与Hexo不得不说的那些事之三——安装Nginx | Panda没有黑眼圈</title>
+<title>嘿，我们都在这里——一些小问题解决合辑 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -275,11 +274,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-嘿，我们都在这里——一些小问题解决合辑" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/17/安装Nginx/" class="article-date">
-      <time datetime="2018-06-17T12:58:00.000Z" itemprop="datePublished">2018-06-17</time>
+      <a href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/" class="article-date">
+      <time datetime="2018-07-14T07:24:00.000Z" itemprop="datePublished">2018-07-14</time>
 </a>
 
 
@@ -294,7 +293,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      VPS与Hexo不得不说的那些事之三——安装Nginx
+      嘿，我们都在这里——一些小问题解决合辑
     </h1>
   
 
@@ -302,14 +301,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/问题/">问题</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -319,35 +314,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-16.png" alt="Nginx"><br>本文主要讲述安装<strong>Nginx</strong><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/here.png" alt="I&#39;m here"><br>本文将统计遇到的一些小问题<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="安装编译工具及库文件"><a href="#安装编译工具及库文件" class="headerlink" title="安装编译工具及库文件"></a>安装编译工具及库文件</h1><p> <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
-<h1 id="首先要安装-PCRE"><a href="#首先要安装-PCRE" class="headerlink" title="首先要安装 PCRE"></a>首先要安装 PCRE</h1><p> PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
-<h2 id="下载-PCRE-安装包"><a href="#下载-PCRE-安装包" class="headerlink" title="下载 PCRE 安装包"></a>下载 PCRE 安装包</h2><blockquote>
-<p>下载地址：<br><a href="https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz" target="_blank" rel="noopener">https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</a></p>
-</blockquote>
-<p><code>wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</code><br>为了配合下面Nginx安装，建议在/usr/local/src/目录下下载。</p>
-<h2 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf pcre-8.40.tar.gz</code></p>
-<h2 id="进入安装包目录"><a href="#进入安装包目录" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd pcre-8.40</code></p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看pcre版本"><a href="#查看pcre版本" class="headerlink" title="查看pcre版本"></a>查看pcre版本</h2><p><code>pcre-config --version</code><br><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h1 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h1><h2 id="下载-Nginx"><a href="#下载-Nginx" class="headerlink" title="下载 Nginx"></a>下载 Nginx</h2><blockquote>
-<p>下载地址：<br><a href="http://nginx.org/download/nginx-1.14.0.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.14.0.tar.gz</a></p>
-</blockquote>
-<p><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code></p>
-<h2 id="解压安装包-1"><a href="#解压安装包-1" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf nginx-1.14.0.tar.gz</code></p>
-<h2 id="进入安装包目录-1"><a href="#进入安装包目录-1" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd nginx-1.14.0</code></p>
-<h2 id="编译安装-1"><a href="#编译安装-1" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.40</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看Nginx版本"><a href="#查看Nginx版本" class="headerlink" title="查看Nginx版本"></a>查看Nginx版本</h2><p><code>/usr/local/webserver/nginx/sbin/nginx -v</code></p>
-<p><img src="/images/pasted-3.png" alt="upload successful"></p>
-<p>到此，Nginx安装完成。</p>
+
+<h1 id="Hexo-deploy相关"><a href="#Hexo-deploy相关" class="headerlink" title="Hexo-deploy相关"></a>Hexo-deploy相关</h1><p>问题：执行<code>hexo d</code>时会报<font color="red">HTTP request failed</font>的错误</p>
+<p>解决方法：将Hexo主配置文件中最后的<code>https://github.com/YourUserName/YourUserName.github.io</code>改成<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:YourUserName/YourUserName.github.io`即可</p>
+<p>即在/home/wwwroot/_config.yml中将<code>repo: https:xxx</code>修改为<code>repo: git@xxx</code><br><img src="/images/pasted-22.png" alt="配置截图"></p>
 <blockquote>
-<p>参考文章：</p>
-<ol>
-<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a></li>
-</ol>
+<p>参考文章：<a href="https://github.com/hexojs/hexo/issues/1135" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/1135</a></p>
 </blockquote>
+<p><hr></p>
+<h1 id="Pycharm-pip出错相关"><a href="#Pycharm-pip出错相关" class="headerlink" title="Pycharm pip出错相关"></a>Pycharm pip出错相关</h1><p>问题：不知道出于什么原因，我打开Pycharm的时候会出现<code>module &#39;pip&#39; has no attribute &#39;main&#39;</code>这个问题，经过搜索和实验，下面博主的方法能将这个错误进行修正</p>
+<p>解决方法：</p>
+<blockquote>
+<p>参考文章：<a href="https://blog.csdn.net/yup1212/article/details/80047326" target="_blank" rel="noopener">https://blog.csdn.net/yup1212/article/details/80047326</a></p>
+</blockquote>
+<h1 id="文章的时间问题"><a href="#文章的时间问题" class="headerlink" title="文章的时间问题"></a>文章的时间问题</h1><p>问题：之前以为是因为主题问题，导致发布时间和显示时间相差12个小时，所以千方百计地想办法对主题里面的时间设置进行不断调整，结果没有一个成功的，短暂时间内放弃对时间的修复。幸得2018年7月13日闲下来发博文的时候，重拾此问题，并将修正对象转移至服务器上，这才有了时间修复成功的。</p>
+<p>操作系统：<font color="red">Centos 6 x86_64 bbr </font>，US, California</p>
+<p>解决方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">1. 编辑系统时区配置文件</span><br><span class="line">vi /etc/sysconfig/clock </span><br><span class="line"></span><br><span class="line">2. 在配置文件中，将ZONE改为Asia/Shanghai</span><br><span class="line">ZONE=&quot;Asia/Shanghai&quot;</span><br><span class="line"></span><br><span class="line">3. 删除默认配置</span><br><span class="line">rm -rf /etc/localtime</span><br><span class="line"></span><br><span class="line">4. 重新指定配置</span><br><span class="line">ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line">5. 同步系统时间（若系统中没有安装ntpdate，需要用yum进行安装）</span><br><span class="line">ntpdate -u pool.ntp.org</span><br><span class="line"></span><br><span class="line">6. 将硬件时间调整成与目前的系统时钟一致。</span><br><span class="line">hwclock --systohc</span><br><span class="line"></span><br><span class="line">7. 将硬件时间写入系统时间</span><br><span class="line">hwclock --hctosys</span><br><span class="line"></span><br><span class="line">8. 强制系统时间写入CMOS中防止重启失效</span><br><span class="line">hwclock -w</span><br><span class="line"></span><br><span class="line">9. 编辑计划任务表</span><br><span class="line">vi /etc/crontab</span><br><span class="line"></span><br><span class="line">10. 表中最后添加下面这行内容（每天5点半同步时间）</span><br><span class="line">30 5 * * * root /usr/sbin/ntpdate -u pool.ntp.org &amp;&amp; /sbin/clock --systohc</span><br></pre></td></tr></table></figure></p>
 </the>
       
     </div>
@@ -356,13 +341,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></p>
+        <p><span>本文标题:</span><a href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/">嘿，我们都在这里——一些小问题解决合辑</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-17, 20:58:00</p>
-        <p><span>最后更新:</span>2018-06-18, 11:28:02</p>
+        <p><span>发布时间:</span>2018-07-14, 15:24:00</p>
+        <p><span>最后更新:</span>2018-07-14, 16:09:55</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/17/安装Nginx/" title="VPS与Hexo不得不说的那些事之三——安装Nginx">www.adwardx.top/2018/06/17/安装Nginx/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/17/安装Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/" title="嘿，我们都在这里——一些小问题解决合辑">www.adwardx.top/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -374,16 +359,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/17/安装Hexo/">
-                    VPS与Hexo不得不说的那些事之四——安装Hexo
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/安装Node-js/">
-                    VPS与Hexo不得不说的那些事之二——安装Node.js
+                <a href="/2018/07/13/复习之碎碎念/">
+                    复习之碎碎念
                 </a>
             </div>
         
@@ -395,7 +374,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装编译工具及库文件"><span class="toc-number">1.</span> <span class="toc-text">安装编译工具及库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首先要安装-PCRE"><span class="toc-number">2.</span> <span class="toc-text">首先要安装 PCRE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-PCRE-安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载 PCRE 安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包"><span class="toc-number">2.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录"><span class="toc-number">2.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看pcre版本"><span class="toc-number">2.5.</span> <span class="toc-text">查看pcre版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-Nginx"><span class="toc-number">3.1.</span> <span class="toc-text">下载 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包-1"><span class="toc-number">3.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录-1"><span class="toc-number">3.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装-1"><span class="toc-number">3.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Nginx版本"><span class="toc-number">3.5.</span> <span class="toc-text">查看Nginx版本</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-deploy相关"><span class="toc-number">1.</span> <span class="toc-text">Hexo-deploy相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pycharm-pip出错相关"><span class="toc-number">2.</span> <span class="toc-text">Pycharm pip出错相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章的时间问题"><span class="toc-number">3.</span> <span class="toc-text">文章的时间问题</span></a></li></ol>
         
     </div>
     <style>
@@ -461,15 +440,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/17/安装Hexo/" title="上一篇: VPS与Hexo不得不说的那些事之四——安装Hexo">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/安装Node-js/" title="下一篇: VPS与Hexo不得不说的那些事之二——安装Node.js">
+            <a href="/2018/07/13/复习之碎碎念/" title="下一篇: 复习之碎碎念">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -15,22 +15,23 @@
 
 
 
-<meta name="description" content="本文主要讲述安装Nginx">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="非技术相关的一篇博文,单纯纪念一下大学四年生活">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta property="og:url" content="www.adwardx.top/2018/06/17/安装Nginx/index.html">
+<meta property="og:title" content="毕业不说再见——继续努力">
+<meta property="og:url" content="www.adwardx.top/2018/06/30/毕业不说再见——继续努力/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
-<meta property="og:description" content="本文主要讲述安装Nginx">
+<meta property="og:description" content="非技术相关的一篇博文,单纯纪念一下大学四年生活">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-16.png">
-<meta property="og:image" content="/images/pasted-2.png">
-<meta property="og:image" content="/images/pasted-3.png">
-<meta property="og:updated_time" content="2018-06-18T03:28:02.366Z">
+<meta property="og:image" content="/images/biye01.jpg">
+<meta property="og:image" content="/images/biye02.jpg">
+<meta property="og:image" content="http://ws2.sinaimg.cn/large/9150e4e5ly1fjrjfbii3bg206o06ot8x.gif">
+<meta property="og:image" content="/images/biye03.jpg">
+<meta property="og:image" content="/images/biye00.png">
+<meta property="og:updated_time" content="2018-07-13T13:39:11.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta name="twitter:description" content="本文主要讲述安装Nginx">
-<meta name="twitter:image" content="/images/pasted-16.png">
+<meta name="twitter:title" content="毕业不说再见——继续努力">
+<meta name="twitter:description" content="非技术相关的一篇博文,单纯纪念一下大学四年生活">
+<meta name="twitter:image" content="/images/biye01.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VPS与Hexo不得不说的那些事之三——安装Nginx | Panda没有黑眼圈</title>
+<title>毕业不说再见——继续努力 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -275,11 +276,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-毕业不说再见——继续努力" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/17/安装Nginx/" class="article-date">
-      <time datetime="2018-06-17T12:58:00.000Z" itemprop="datePublished">2018-06-17</time>
+      <a href="/2018/06/30/毕业不说再见——继续努力/" class="article-date">
+      <time datetime="2018-06-30T01:59:00.000Z" itemprop="datePublished">2018-06-30</time>
 </a>
 
 
@@ -294,7 +295,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      VPS与Hexo不得不说的那些事之三——安装Nginx
+      毕业不说再见——继续努力
     </h1>
   
 
@@ -302,16 +303,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -319,34 +312,33 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-16.png" alt="Nginx"><br>本文主要讲述安装<strong>Nginx</strong><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/biye01.jpg" width="50%" height="50%"><br>非技术相关的一篇博文,单纯纪念一下大学四年生活<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="安装编译工具及库文件"><a href="#安装编译工具及库文件" class="headerlink" title="安装编译工具及库文件"></a>安装编译工具及库文件</h1><p> <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
-<h1 id="首先要安装-PCRE"><a href="#首先要安装-PCRE" class="headerlink" title="首先要安装 PCRE"></a>首先要安装 PCRE</h1><p> PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
-<h2 id="下载-PCRE-安装包"><a href="#下载-PCRE-安装包" class="headerlink" title="下载 PCRE 安装包"></a>下载 PCRE 安装包</h2><blockquote>
-<p>下载地址：<br><a href="https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz" target="_blank" rel="noopener">https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</a></p>
-</blockquote>
-<p><code>wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</code><br>为了配合下面Nginx安装，建议在/usr/local/src/目录下下载。</p>
-<h2 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf pcre-8.40.tar.gz</code></p>
-<h2 id="进入安装包目录"><a href="#进入安装包目录" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd pcre-8.40</code></p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看pcre版本"><a href="#查看pcre版本" class="headerlink" title="查看pcre版本"></a>查看pcre版本</h2><p><code>pcre-config --version</code><br><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h1 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h1><h2 id="下载-Nginx"><a href="#下载-Nginx" class="headerlink" title="下载 Nginx"></a>下载 Nginx</h2><blockquote>
-<p>下载地址：<br><a href="http://nginx.org/download/nginx-1.14.0.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.14.0.tar.gz</a></p>
-</blockquote>
-<p><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code></p>
-<h2 id="解压安装包-1"><a href="#解压安装包-1" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf nginx-1.14.0.tar.gz</code></p>
-<h2 id="进入安装包目录-1"><a href="#进入安装包目录-1" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd nginx-1.14.0</code></p>
-<h2 id="编译安装-1"><a href="#编译安装-1" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.40</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看Nginx版本"><a href="#查看Nginx版本" class="headerlink" title="查看Nginx版本"></a>查看Nginx版本</h2><p><code>/usr/local/webserver/nginx/sbin/nginx -v</code></p>
-<p><img src="/images/pasted-3.png" alt="upload successful"></p>
-<p>到此，Nginx安装完成。</p>
-<blockquote>
-<p>参考文章：</p>
+<h1 id="并不优秀的我"><a href="#并不优秀的我" class="headerlink" title="并不优秀的我"></a>并不优秀的我</h1><p>&emsp;&emsp;前三年，看着身边的人一个个为了自己的理想逐步使自己变得更好，而自己看起来却没有什么变化。这样的情况让我变得内心很焦灼，每天想着明天要怎么怎么做，实现某个计划，让自己变得更好。但事实是，自己的实践能力并没有想象中的那么好。<br><img src="/images/biye02.jpg" width="50%" height="50%"></p>
+<h1 id="理想不实践"><a href="#理想不实践" class="headerlink" title="理想不实践"></a>理想不实践</h1><p>&emsp;&emsp;曾经想过出国留学，为了准备考雅思，我认真学了几周的英语，后来觉得经济状况不好，便不再有这个念头。<br><br>&emsp;&emsp;曾经想好好学习Java语言，然后自己做项目玩，后来看着厚厚的令自己头疼的Java参考书便打消了这个念头。<br><br>&emsp;&emsp;曾经还想过自己做几个漂亮的网站，然后便一股脑地投入学习HTML5。<br><br>&emsp;&emsp;……<br><br>&emsp;&emsp;事实上，到最后，我只学了点入门基础。现在看来，面对学习的困难，以前的我不假思索地向它们低头。<br><img src="http://ws2.sinaimg.cn/large/9150e4e5ly1fjrjfbii3bg206o06ot8x.gif" width="50%" height="50%"></p>
+<h1 id="实践进行时"><a href="#实践进行时" class="headerlink" title="实践进行时"></a>实践进行时</h1><p>&emsp;&emsp;大三升大四的期间，我去过几家公司面试。虽然最后给我的结果都不录用，但从中吸取到了很多经验。面对自身出现的各种问题，开始着手于想方设法地进行修正弥补不足。至此，我便开始认真动手实践，这是一个漫长而又收获满满的过程……<br><br>&emsp;&emsp;秉承着想做网页的想法，在机缘巧合之下，于2017年12月我学习了Flask，开始了我自己动手的小项目。第一个项目是一个微电影管理系统，网页由其提供，而实现的功能逻辑则由自己编写。懵懵懂懂地将这个项目做完之后，我的内心得到了极大的满足感，比起以前被捧得有多厉害实际上毫无内容的我来说，这才是学习。<a href="https://github.com/ZengX2017/adward-movie" target="_blank" rel="noopener">微电影管理系统</a><br><img src="/images/biye03.jpg" width="50%" height="50%"><br>&emsp;&emsp;做完之后，不久就开始了毕业设计的选题和开题答辩。得益于此项目帮我重新树立如何认真学习的信心，毕业设计我也用的Flask实现课题的内容。在制作过程中可谓是耗费了不少精力。</p>
+<h1 id="执行力VS懒惰"><a href="#执行力VS懒惰" class="headerlink" title="执行力VS懒惰"></a>执行力VS懒惰</h1><p>&emsp;&emsp;在设计毕业设计的过程中，可谓是呕心沥血（夸张了hhhhh)。从数据库的设计到页面的搭建再到功能的实现，全程下来，<font color="red">秃头指数</font>不知道上升了多少呢（劳资无所畏惧）,还记得在放寒假前天天为设计数据库的事情忙得不可开交，毕竟数据库的重要性不言而喻。终于在回家前完成了基本框架……<br><br>&emsp;&emsp;家里真的冷得要死，但我还是坚持下来，每天除了吃饭就呆在家里做毕业设计，几乎不出门。为了设计适配多端的网页，还特地花时间去学了Bootstrap，光是设计网页都花了我快一个星期的时间，设计完又改改完不满意又改。在坚持不懈的努力下，终于把基本模板搭建完成了。随后便开始了<font color="red">秃头之旅</font>。<br><img src="/images/biye00.png" alt="biye00"><br>&emsp;&emsp;由上可见，我的执行力还是战胜了懒惰。不仅在规定的时间内完成了此毕业设计，还用买的阿里云服务器将其部署上线。（<font color="red">篇幅原因，此次设计不多说</font>）<a href="https://github.com/ZengX2017/Online-Registration" target="_blank" rel="noopener">软件专业资格考试系统</a></p>
+<h1 id="实习之路"><a href="#实习之路" class="headerlink" title="实习之路"></a>实习之路</h1><p>&emsp;&emsp;在2018年3月，偶然得到了在<font color="red">上海市公安部第三研究所</font>实习的机会。于4月——6月在此实习3个月，一开始去实习前充满了不安与焦灼，毕竟考虑到自身学历和能力问题能不能胜任这份实习工作。但到后来才发现，一份工作只要用心做，一定能做成功（hhhhh，没有什么要说的）</p>
+<h1 id="未来的我"><a href="#未来的我" class="headerlink" title="未来的我"></a>未来的我</h1><p>&emsp;&emsp;大学四年来，有了前三年的铺垫，大四才能有这么多收获。即使前三年的我不够努力，不够认真，不够聪明。但我相信，接下来的我会以大四这一年的付出为契机，不断前行，让自己变得更好。<br>&emsp;&emsp;To Be Continued……</p>
+<h1 id="致以努力之人"><a href="#致以努力之人" class="headerlink" title="致以努力之人"></a>致以努力之人</h1><p>大学所获荣誉如下：</p>
 <ol>
-<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a></li>
+<li>上海市优秀毕业生</li>
+<li>上海市奖学金</li>
+<li>国家励志奖学金</li>
+<li>蓝桥杯上海赛区JAVA软件开发大学B组三等奖</li>
+<li>上海电机学院优秀毕业生</li>
+<li>上海电机学院2018届优异学士学位论文（TOP1%）奖</li>
+<li>博学奖学金特等奖3次，一等奖3次，二等奖1次</li>
+<li>三好学生3次</li>
+<li>柘中奖学金3次</li>
+<li>优秀志愿者</li>
+<li>优秀团员</li>
+<li>卓越奖学金比赛类奖学金</li>
 </ol>
+<p><font color="red">愿我继续以实践将2019年考研成功拿下，也愿我的小伙伴们前程似锦，感谢你们的陪伴</font></p>
+<blockquote>
+<p>2018年6月30日 12点13分</p>
 </blockquote>
 </the>
       
@@ -356,13 +348,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></p>
+        <p><span>本文标题:</span><a href="/2018/06/30/毕业不说再见——继续努力/">毕业不说再见——继续努力</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-17, 20:58:00</p>
-        <p><span>最后更新:</span>2018-06-18, 11:28:02</p>
+        <p><span>发布时间:</span>2018-06-30, 09:59:00</p>
+        <p><span>最后更新:</span>2018-07-13, 21:39:11</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/17/安装Nginx/" title="VPS与Hexo不得不说的那些事之三——安装Nginx">www.adwardx.top/2018/06/17/安装Nginx/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/17/安装Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/30/毕业不说再见——继续努力/" title="毕业不说再见——继续努力">www.adwardx.top/2018/06/30/毕业不说再见——继续努力/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/30/毕业不说再见——继续努力/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -375,15 +367,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/17/安装Hexo/">
-                    VPS与Hexo不得不说的那些事之四——安装Hexo
+                <a href="/2018/07/04/考研复习计划与进程/">
+                    考研复习计划与进程
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/安装Node-js/">
-                    VPS与Hexo不得不说的那些事之二——安装Node.js
+                <a href="/2018/06/26/从入门到放弃之——Nginx/">
+                    从入门到放弃之——Nginx学习笔记
                 </a>
             </div>
         
@@ -395,7 +387,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装编译工具及库文件"><span class="toc-number">1.</span> <span class="toc-text">安装编译工具及库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首先要安装-PCRE"><span class="toc-number">2.</span> <span class="toc-text">首先要安装 PCRE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-PCRE-安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载 PCRE 安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包"><span class="toc-number">2.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录"><span class="toc-number">2.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看pcre版本"><span class="toc-number">2.5.</span> <span class="toc-text">查看pcre版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-Nginx"><span class="toc-number">3.1.</span> <span class="toc-text">下载 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包-1"><span class="toc-number">3.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录-1"><span class="toc-number">3.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装-1"><span class="toc-number">3.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Nginx版本"><span class="toc-number">3.5.</span> <span class="toc-text">查看Nginx版本</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#并不优秀的我"><span class="toc-number">1.</span> <span class="toc-text">并不优秀的我</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#理想不实践"><span class="toc-number">2.</span> <span class="toc-text">理想不实践</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实践进行时"><span class="toc-number">3.</span> <span class="toc-text">实践进行时</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#执行力VS懒惰"><span class="toc-number">4.</span> <span class="toc-text">执行力VS懒惰</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实习之路"><span class="toc-number">5.</span> <span class="toc-text">实习之路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未来的我"><span class="toc-number">6.</span> <span class="toc-text">未来的我</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#致以努力之人"><span class="toc-number">7.</span> <span class="toc-text">致以努力之人</span></a></li></ol>
         
     </div>
     <style>
@@ -461,7 +453,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/17/安装Hexo/" title="上一篇: VPS与Hexo不得不说的那些事之四——安装Hexo">
+            <a href="/2018/07/04/考研复习计划与进程/" title="上一篇: 考研复习计划与进程">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -469,7 +461,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/安装Node-js/" title="下一篇: VPS与Hexo不得不说的那些事之二——安装Node.js">
+            <a href="/2018/06/26/从入门到放弃之——Nginx/" title="下一篇: 从入门到放弃之——Nginx学习笔记">
                 <i class="fa fa-angle-right"></i>
             </a>
         

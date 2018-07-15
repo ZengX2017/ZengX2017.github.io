@@ -15,22 +15,21 @@
 
 
 
-<meta name="description" content="本文主要讲述安装Nginx">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="前四篇文章分别讲述了如何安装Git、Node.js、Nginx和Hexo，本章主要讲述一些其他配置">
+<meta name="keywords" content="PM2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta property="og:url" content="www.adwardx.top/2018/06/17/安装Nginx/index.html">
+<meta property="og:title" content="VPS与Hexo不得不说的那些事之五——其他配置">
+<meta property="og:url" content="www.adwardx.top/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
-<meta property="og:description" content="本文主要讲述安装Nginx">
+<meta property="og:description" content="前四篇文章分别讲述了如何安装Git、Node.js、Nginx和Hexo，本章主要讲述一些其他配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-16.png">
-<meta property="og:image" content="/images/pasted-2.png">
-<meta property="og:image" content="/images/pasted-3.png">
-<meta property="og:updated_time" content="2018-06-18T03:28:02.366Z">
+<meta property="og:image" content="/images/pasted-17.png">
+<meta property="og:image" content="/images/pasted-6.png">
+<meta property="og:updated_time" content="2018-06-18T03:28:38.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta name="twitter:description" content="本文主要讲述安装Nginx">
-<meta name="twitter:image" content="/images/pasted-16.png">
+<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之五——其他配置">
+<meta name="twitter:description" content="前四篇文章分别讲述了如何安装Git、Node.js、Nginx和Hexo，本章主要讲述一些其他配置">
+<meta name="twitter:image" content="/images/pasted-17.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VPS与Hexo不得不说的那些事之三——安装Nginx | Panda没有黑眼圈</title>
+<title>VPS与Hexo不得不说的那些事之五——其他配置 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -275,11 +274,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-VPS与Hexo不得不说的那些事之五——其他配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/17/安装Nginx/" class="article-date">
-      <time datetime="2018-06-17T12:58:00.000Z" itemprop="datePublished">2018-06-17</time>
+      <a href="/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/" class="article-date">
+      <time datetime="2018-06-18T02:39:00.000Z" itemprop="datePublished">2018-06-18</time>
 </a>
 
 
@@ -294,7 +293,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      VPS与Hexo不得不说的那些事之三——安装Nginx
+      VPS与Hexo不得不说的那些事之五——其他配置
     </h1>
   
 
@@ -309,7 +308,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PM2/">PM2</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -319,33 +318,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-16.png" alt="Nginx"><br>本文主要讲述安装<strong>Nginx</strong><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-17.png" alt="其他配置"><br>前四篇文章分别讲述了如何安装Git、Node.js、Nginx和Hexo，本章主要讲述一些其他配置<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="安装编译工具及库文件"><a href="#安装编译工具及库文件" class="headerlink" title="安装编译工具及库文件"></a>安装编译工具及库文件</h1><p> <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
-<h1 id="首先要安装-PCRE"><a href="#首先要安装-PCRE" class="headerlink" title="首先要安装 PCRE"></a>首先要安装 PCRE</h1><p> PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
-<h2 id="下载-PCRE-安装包"><a href="#下载-PCRE-安装包" class="headerlink" title="下载 PCRE 安装包"></a>下载 PCRE 安装包</h2><blockquote>
-<p>下载地址：<br><a href="https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz" target="_blank" rel="noopener">https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</a></p>
+<h1 id="百度站长验证"><a href="#百度站长验证" class="headerlink" title="百度站长验证"></a>百度站长验证</h1><blockquote>
+<p>验证相关帮助<br><a href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=1" target="_blank" rel="noopener">https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=1</a></p>
 </blockquote>
-<p><code>wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</code><br>为了配合下面Nginx安装，建议在/usr/local/src/目录下下载。</p>
-<h2 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf pcre-8.40.tar.gz</code></p>
-<h2 id="进入安装包目录"><a href="#进入安装包目录" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd pcre-8.40</code></p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看pcre版本"><a href="#查看pcre版本" class="headerlink" title="查看pcre版本"></a>查看pcre版本</h2><p><code>pcre-config --version</code><br><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h1 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h1><h2 id="下载-Nginx"><a href="#下载-Nginx" class="headerlink" title="下载 Nginx"></a>下载 Nginx</h2><blockquote>
-<p>下载地址：<br><a href="http://nginx.org/download/nginx-1.14.0.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.14.0.tar.gz</a></p>
-</blockquote>
-<p><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code></p>
-<h2 id="解压安装包-1"><a href="#解压安装包-1" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf nginx-1.14.0.tar.gz</code></p>
-<h2 id="进入安装包目录-1"><a href="#进入安装包目录-1" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd nginx-1.14.0</code></p>
-<h2 id="编译安装-1"><a href="#编译安装-1" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.40</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看Nginx版本"><a href="#查看Nginx版本" class="headerlink" title="查看Nginx版本"></a>查看Nginx版本</h2><p><code>/usr/local/webserver/nginx/sbin/nginx -v</code></p>
-<p><img src="/images/pasted-3.png" alt="upload successful"></p>
-<p>到此，Nginx安装完成。</p>
+<p>此处采用的是CNAME验证</p>
+<h1 id="Nginx后台启动"><a href="#Nginx后台启动" class="headerlink" title="Nginx后台启动"></a>Nginx后台启动</h1><p>主要修改箭头所指的2个地方，第一个指的是Nginx的安装目录，第二个指的是Nginx的配置目录<br><img src="/images/pasted-6.png" alt="upload successful"></p>
+<h1 id="PM2使用相关"><a href="#PM2使用相关" class="headerlink" title="PM2使用相关"></a>PM2使用相关</h1><p>为了让Hexo能保持后台运行，使用PM2对其进行管理</p>
+<h2 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h2><pre><code>npm  install -g pm2
+</code></pre><h2 id="写一个执行脚本"><a href="#写一个执行脚本" class="headerlink" title="写一个执行脚本"></a>写一个执行脚本</h2><p>在博客根目录下面创建一个xxx(此处命名为：<font color="red">hexo_run</font>).js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//run</span><br><span class="line">const &#123; exec &#125; = require(&apos;child_process&apos;)</span><br><span class="line">exec(&apos;hexo server&apos;,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        if(error)&#123;</span><br><span class="line">                console.log(&apos;exec error: $&#123;error&#125;&apos;)</span><br><span class="line">                return</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(&apos;stdout: $&#123;stdout&#125;&apos;);</span><br><span class="line">        console.log(&apos;stderr: $&#123;stderr&#125;&apos;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="在根目录下运行脚本"><a href="#在根目录下运行脚本" class="headerlink" title="在根目录下运行脚本"></a>在根目录下运行脚本</h2><p><code>pm2 start hexo_run.js</code></p>
 <blockquote>
-<p>参考文章：</p>
+<p>参考文章</p>
 <ol>
-<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a></li>
+<li><a href="http://moxfive.xyz/yelee/5.Vendor/baidu-site.html" target="_blank" rel="noopener">http://moxfive.xyz/yelee/5.Vendor/baidu-site.html</a> 中的主题指导手册</li>
+<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a> 中的nginx相关</li>
+<li><a href="https://www.cnblogs.com/whatmiss/p/7091220.html" target="_blank" rel="noopener">https://www.cnblogs.com/whatmiss/p/7091220.html</a> 中的第一部分代码</li>
+<li><a href="https://blog.csdn.net/Tangcuyuha/article/details/80331169" target="_blank" rel="noopener">https://blog.csdn.net/Tangcuyuha/article/details/80331169</a> 中的PM2安装</li>
+<li><a href="https://segmentfault.com/a/1190000002539204" target="_blank" rel="noopener">https://segmentfault.com/a/1190000002539204</a> 中的PM2使用介绍</li>
 </ol>
 </blockquote>
 </the>
@@ -356,13 +348,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></p>
+        <p><span>本文标题:</span><a href="/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-17, 20:58:00</p>
-        <p><span>最后更新:</span>2018-06-18, 11:28:02</p>
+        <p><span>发布时间:</span>2018-06-18, 10:39:00</p>
+        <p><span>最后更新:</span>2018-06-18, 11:28:38</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/17/安装Nginx/" title="VPS与Hexo不得不说的那些事之三——安装Nginx">www.adwardx.top/2018/06/17/安装Nginx/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/17/安装Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/" title="VPS与Hexo不得不说的那些事之五——其他配置">www.adwardx.top/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/18/VPS与Hexo不得不说的那些事之五——其他配置/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -375,15 +367,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/17/安装Hexo/">
-                    VPS与Hexo不得不说的那些事之四——安装Hexo
+                <a href="/2018/06/18/一些Tips/">
+                    一些Tips
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/安装Node-js/">
-                    VPS与Hexo不得不说的那些事之二——安装Node.js
+                <a href="/2018/06/18/To-do-list/">
+                    To do list
                 </a>
             </div>
         
@@ -395,7 +387,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装编译工具及库文件"><span class="toc-number">1.</span> <span class="toc-text">安装编译工具及库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首先要安装-PCRE"><span class="toc-number">2.</span> <span class="toc-text">首先要安装 PCRE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-PCRE-安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载 PCRE 安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包"><span class="toc-number">2.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录"><span class="toc-number">2.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看pcre版本"><span class="toc-number">2.5.</span> <span class="toc-text">查看pcre版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-Nginx"><span class="toc-number">3.1.</span> <span class="toc-text">下载 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包-1"><span class="toc-number">3.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录-1"><span class="toc-number">3.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装-1"><span class="toc-number">3.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Nginx版本"><span class="toc-number">3.5.</span> <span class="toc-text">查看Nginx版本</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#百度站长验证"><span class="toc-number">1.</span> <span class="toc-text">百度站长验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx后台启动"><span class="toc-number">2.</span> <span class="toc-text">Nginx后台启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PM2使用相关"><span class="toc-number">3.</span> <span class="toc-text">PM2使用相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装pm2"><span class="toc-number">3.1.</span> <span class="toc-text">安装pm2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写一个执行脚本"><span class="toc-number">3.2.</span> <span class="toc-text">写一个执行脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在根目录下运行脚本"><span class="toc-number">3.3.</span> <span class="toc-text">在根目录下运行脚本</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -461,7 +453,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/17/安装Hexo/" title="上一篇: VPS与Hexo不得不说的那些事之四——安装Hexo">
+            <a href="/2018/06/18/一些Tips/" title="上一篇: 一些Tips">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -469,7 +461,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/安装Node-js/" title="下一篇: VPS与Hexo不得不说的那些事之二——安装Node.js">
+            <a href="/2018/06/18/To-do-list/" title="下一篇: To do list">
                 <i class="fa fa-angle-right"></i>
             </a>
         
