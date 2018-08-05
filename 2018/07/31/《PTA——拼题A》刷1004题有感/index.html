@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Panda没有黑眼圈">
 <meta property="og:description" content="想着在复习的时候也要开始抓算法的萌新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T12:44:32.590Z">
+<meta property="og:updated_time" content="2018-08-04T13:20:14.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《PTA——拼题A》之第1004题">
 <meta name="twitter:description" content="想着在复习的时候也要开始抓算法的萌新">
@@ -347,7 +347,12 @@ Joe Math990112
 
 <h1 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta"># <span class="meta-keyword">define</span> MAXSIZE 11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Student</span>&#123;</span></span><br><span class="line">  <span class="keyword">char</span> name[MAXSIZE];</span><br><span class="line">  <span class="keyword">char</span> no[MAXSIZE];</span><br><span class="line">  <span class="keyword">int</span> grade;</span><br><span class="line">&#125;Student;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, number, maxIndex=<span class="number">0</span>, minIndex=<span class="number">0</span>, maxGrade, minGrade; </span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;number);</span><br><span class="line">  Student student[number];</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; number; ++i)&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s %s %d"</span>, student[i].name,student[i].no,&amp;student[i].grade);</span><br><span class="line">  &#125;</span><br><span class="line">  maxGrade=minGrade=student[<span class="number">0</span>].grade;</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; number; ++i)&#123;</span><br><span class="line">    <span class="keyword">if</span>(maxGrade &lt; student[i].grade)&#123;</span><br><span class="line">      maxGrade = student[i].grade;</span><br><span class="line">      maxIndex = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(minGrade &gt; student[i].grade)&#123;</span><br><span class="line">      minGrade = student[i].grade;</span><br><span class="line">      minIndex = i;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%s %s\n"</span>, student[maxIndex].name, student[maxIndex].no);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%s %s\n"</span>, student[minIndex].name, student[minIndex].no);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="出错分析"><a href="#出错分析" class="headerlink" title="出错分析"></a>出错分析</h1><h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><p><pre># define MAXSIZE 11</pre></p>
-<font color="red">这一行之前我定义为10</font>，没有考虑到字符串要多1个用来存放’\0’（结束标识符）<br><br><br>## 问题二<br><pre>typedef struct Student{<br>  char name[MAXSIZE];<br>  char no[MAXSIZE];<br>  int grade;<br>}Student;</pre><br><font color="red">之前没有用到typedef，导致声明结构体数组时出错</font>，这一方面主要是因为自己对于结构体定义和声明的知识点有所遗忘<br><br><br>## 问题三<br><pre>maxIndex=0, minIndex=0</pre><br><font color="red">定义时忘记赋初值了，导致出现了数组越界的错误</font></the>
+<font color="red">这一行之前我定义为10</font>，没有考虑到字符串要多1个用来存放’\0’（结束标识符）<br><br><h2>问题二</h2><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Student</span>&#123;</span></span><br><span class="line">  <span class="keyword">char</span> name[MAXSIZE];</span><br><span class="line">  <span class="keyword">char</span> no[MAXSIZE];</span><br><span class="line">  <span class="keyword">int</span> grade;</span><br><span class="line">&#125;Student;</span><br></pre></td></tr></table></figure><br><br><font color="red">之前没有用到typedef，导致声明结构体数组时出错</font>，这一方面主要是因为自己对于结构体定义和声明的知识点有所遗忘<br><br><h2>问题三</h2><br><pre>maxIndex=0, minIndex=0</pre><br><font color="red">定义时忘记赋初值了，导致出现了数组越界的错误</font>
+
+<blockquote>
+<p>当前排名：11491 245分</p>
+</blockquote>
+</the>
       
     </div>
     
@@ -358,7 +363,7 @@ Joe Math990112
         <p><span>本文标题:</span><a href="/2018/07/31/《PTA——拼题A》刷1004题有感/">《PTA——拼题A》之第1004题</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
         <p><span>发布时间:</span>2018-07-31, 20:15:00</p>
-        <p><span>最后更新:</span>2018-07-31, 20:44:32</p>
+        <p><span>最后更新:</span>2018-08-04, 21:20:14</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/31/《PTA——拼题A》刷1004题有感/" title="《PTA——拼题A》之第1004题">www.adwardx.top/2018/07/31/《PTA——拼题A》刷1004题有感/</a>
             <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/07/31/《PTA——拼题A》刷1004题有感/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -372,6 +377,12 @@ Joe Math990112
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/08/01/《PTA——拼题A》之第1081题/">
+                    《PTA——拼题A》之第1081题
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -388,7 +399,7 @@ Joe Math990112
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目介绍"><span class="toc-number">1.</span> <span class="toc-text">题目介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源代码"><span class="toc-number">2.</span> <span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出错分析"><span class="toc-number">3.</span> <span class="toc-text">出错分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一"><span class="toc-number">3.1.</span> <span class="toc-text">问题一</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目介绍"><span class="toc-number">1.</span> <span class="toc-text">题目介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源代码"><span class="toc-number">2.</span> <span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出错分析"><span class="toc-number">3.</span> <span class="toc-text">出错分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一"><span class="toc-number">3.1.</span> <span class="toc-text">问题一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text">问题二</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.</span> <span class="toc-text">问题三</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -454,7 +465,9 @@ Joe Math990112
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/08/01/《PTA——拼题A》之第1081题/" title="上一篇: 《PTA——拼题A》之第1081题">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -466,7 +479,7 @@ Joe Math990112
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/31/《PTA——拼题A》刷1004题有感/">《PTA——拼题A》之第1004题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/《福利》bilibili免流版/">《福利》bilibili免流版</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/">嘿，我们都在这里——一些小问题解决合辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/13/复习之碎碎念/">复习之碎碎念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/04/考研复习计划与进程/">考研复习计划与进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/毕业不说再见——继续努力/">毕业不说再见——继续努力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/26/从入门到放弃之——Nginx/">从入门到放弃之——Nginx学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/你好，来必力/">新成员你好——来必力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/一些Tips/">一些Tips</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/To-do-list/">To do list</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Hexo/">VPS与Hexo不得不说的那些事之四——安装Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Node-js/">VPS与Hexo不得不说的那些事之二——安装Node.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Git/">VPS与Hexo不得不说的那些事之一——安装Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/搭建Hexo/">VPS与Hexo不得不说的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/idea一些操作（个人记录）/">idea一些操作（个人记录）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1008题/">《PTA——拼题A》之第1008题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1014题/">《PTA——拼题A》之第1014题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之错误集锦/">《PTA——拼题A》之知识集锦</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之第1081题/">《PTA——拼题A》之第1081题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/31/《PTA——拼题A》刷1004题有感/">《PTA——拼题A》之第1004题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/《福利》bilibili免流版/">《福利》bilibili免流版</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/">嘿，我们都在这里——一些小问题解决合辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/13/复习之碎碎念/">复习之碎碎念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/04/考研复习计划与进程/">考研复习计划与进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/毕业不说再见——继续努力/">毕业不说再见——继续努力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/26/从入门到放弃之——Nginx/">从入门到放弃之——Nginx学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/你好，来必力/">新成员你好——来必力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/一些Tips/">一些Tips</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/To-do-list/">To do list</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Hexo/">VPS与Hexo不得不说的那些事之四——安装Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Node-js/">VPS与Hexo不得不说的那些事之二——安装Node.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Git/">VPS与Hexo不得不说的那些事之一——安装Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/搭建Hexo/">VPS与Hexo不得不说的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/idea一些操作（个人记录）/">idea一些操作（个人记录）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></li></ul>
 
 
 
