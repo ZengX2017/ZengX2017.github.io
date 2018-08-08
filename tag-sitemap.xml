@@ -44,29 +44,8 @@
     </url>
 
     <url>
-        <loc>www.adwardx.top/tags/%E5%85%B6%E4%BB%96/</loc>
-        <lastmod>2018-06-19T13:04:29.653Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>www.adwardx.top/tags/Nginx/</loc>
-        <lastmod>2018-07-02T05:04:09.372Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>www.adwardx.top/tags/%E9%97%AE%E9%A2%98/</loc>
         <lastmod>2018-07-14T08:09:55.869Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>www.adwardx.top/tags/Tips/</loc>
-        <lastmod>2018-07-14T08:31:11.521Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -86,15 +65,36 @@
     </url>
 
     <url>
-        <loc>www.adwardx.top/tags/%E6%8B%BC%E9%A2%98A/</loc>
-        <lastmod>2018-08-04T13:20:14.582Z</lastmod>
+        <loc>www.adwardx.top/tags/Hexo/</loc>
+        <lastmod>2018-08-05T02:04:14.670Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>www.adwardx.top/tags/Hexo/</loc>
-        <lastmod>2018-08-05T02:04:14.670Z</lastmod>
+        <loc>www.adwardx.top/tags/%E6%8B%BC%E9%A2%98A/</loc>
+        <lastmod>2018-08-05T09:20:37.156Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.adwardx.top/tags/Nginx/</loc>
+        <lastmod>2018-08-08T08:34:36.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.adwardx.top/tags/Tips/</loc>
+        <lastmod>2018-08-08T08:46:20.510Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.adwardx.top/tags/%E5%85%B6%E4%BB%96/</loc>
+        <lastmod>2018-08-08T09:13:17.098Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

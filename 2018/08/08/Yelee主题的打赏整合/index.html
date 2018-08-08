@@ -15,22 +15,20 @@
 
 
 
-<meta name="description" content="本文主要讲述安装Nginx">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作">
+<meta name="keywords" content="其他">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta property="og:url" content="www.adwardx.top/2018/06/17/安装Nginx/index.html">
+<meta property="og:title" content="Yelee主题的打赏整合">
+<meta property="og:url" content="www.adwardx.top/2018/08/08/Yelee主题的打赏整合/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
-<meta property="og:description" content="本文主要讲述安装Nginx">
+<meta property="og:description" content="Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-16.png">
-<meta property="og:image" content="/images/pasted-2.png">
-<meta property="og:image" content="/images/pasted-3.png">
-<meta property="og:updated_time" content="2018-08-08T08:34:36.074Z">
+<meta property="og:image" content="/images/dashang.png">
+<meta property="og:updated_time" content="2018-08-08T09:13:17.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta name="twitter:description" content="本文主要讲述安装Nginx">
-<meta name="twitter:image" content="/images/pasted-16.png">
+<meta name="twitter:title" content="Yelee主题的打赏整合">
+<meta name="twitter:description" content="Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作">
+<meta name="twitter:image" content="/images/dashang.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VPS与Hexo不得不说的那些事之三——安装Nginx | Panda没有黑眼圈</title>
+<title>Yelee主题的打赏整合 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -275,11 +273,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Yelee主题的打赏整合" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/17/安装Nginx/" class="article-date">
-      <time datetime="2018-06-17T00:58:00.000Z" itemprop="datePublished">2018-06-17</time>
+      <a href="/2018/08/08/Yelee主题的打赏整合/" class="article-date">
+      <time datetime="2018-08-08T08:40:00.000Z" itemprop="datePublished">2018-08-08</time>
 </a>
 
 
@@ -294,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      VPS与Hexo不得不说的那些事之三——安装Nginx
+      Yelee主题的打赏整合
     </h1>
   
 
@@ -303,14 +301,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -320,38 +314,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-16.png" alt="Nginx"><br>本文主要讲述安装<strong>Nginx</strong><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/dashang.png" alt="dashang"><br>Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="安装编译工具及库文件"><a href="#安装编译工具及库文件" class="headerlink" title="安装编译工具及库文件"></a>安装编译工具及库文件</h1><p> <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
-<h1 id="首先要安装-PCRE"><a href="#首先要安装-PCRE" class="headerlink" title="首先要安装 PCRE"></a>首先要安装 PCRE</h1><p> PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
-<h2 id="下载-PCRE-安装包"><a href="#下载-PCRE-安装包" class="headerlink" title="下载 PCRE 安装包"></a>下载 PCRE 安装包</h2><blockquote>
-<p>下载地址：<br><a href="https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz" target="_blank" rel="noopener">https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</a></p>
-</blockquote>
-<p><code>wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</code><br>为了配合下面Nginx安装，建议在/usr/local/src/目录下下载。</p>
-<h2 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf pcre-8.40.tar.gz</code></p>
-<h2 id="进入安装包目录"><a href="#进入安装包目录" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd pcre-8.40</code></p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看pcre版本"><a href="#查看pcre版本" class="headerlink" title="查看pcre版本"></a>查看pcre版本</h2><p><code>pcre-config --version</code><br><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h1 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h1><h2 id="下载-Nginx"><a href="#下载-Nginx" class="headerlink" title="下载 Nginx"></a>下载 Nginx</h2><blockquote>
-<p>下载地址：<br><a href="http://nginx.org/download/nginx-1.14.0.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.14.0.tar.gz</a></p>
-</blockquote>
-<p><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code></p>
-<h2 id="解压安装包-1"><a href="#解压安装包-1" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf nginx-1.14.0.tar.gz</code></p>
-<h2 id="进入安装包目录-1"><a href="#进入安装包目录-1" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd nginx-1.14.0</code></p>
-<h2 id="编译安装-1"><a href="#编译安装-1" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.40</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看Nginx版本"><a href="#查看Nginx版本" class="headerlink" title="查看Nginx版本"></a>查看Nginx版本</h2><p><code>/usr/local/webserver/nginx/sbin/nginx -v</code></p>
-<p><img src="/images/pasted-3.png" alt="upload successful"></p>
-<p>到此，Nginx安装完成。</p>
-<p>nginx启动命令</p>
-<pre>/usr/local/webserver/nginx/sbin/nginx</pre>
-
-<blockquote>
-<p>参考文章：</p>
-<ol>
-<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a></li>
-</ol>
-</blockquote>
+<h1 id="编写打赏模块的代码"><a href="#编写打赏模块的代码" class="headerlink" title="编写打赏模块的代码"></a>编写打赏模块的代码</h1><p>在<code>themes/yelee/layout/_partial/</code>目录下新建<font color="red">donate.ejs</font>文件，其中内容如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> =<span class="string">"post-donate"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"donate_board"</span> <span class="attr">class</span>=<span class="string">"donate_bar center"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"btn_donate"</span> <span class="attr">class</span>=<span class="string">"btn_donate"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">title</span>=<span class="string">"打赏"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"donate_txt"</span>&gt;</span></span><br><span class="line">           ↑<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">%=theme.donate_message%</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"donate_guide"</span> <span class="attr">class</span>=<span class="string">"donate_bar center hidden"</span> &gt;</span></span><br><span class="line">         <span class="comment">&lt;!-- 支付宝打赏图案 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- theme.root_url %&gt;/img/Alipay.jpg"</span> <span class="attr">alt</span>=<span class="string">"支付宝打赏"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 微信打赏图案 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- theme.root_url %&gt;/img/weixin.jpg"</span> <span class="attr">alt</span>=<span class="string">"微信打赏"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        document.getElementById('btn_donate').onclick = function()&#123;</span></span><br><span class="line"><span class="undefined">            $('#donate_board').addClass('hidden');</span></span><br><span class="line"><span class="undefined">            $('#donate_guide').removeClass('hidden');</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注：</font>打赏的图案直接存在<code>themes/yelee/source/img/</code>里面即可，标题可以自行命名。</p>
+<h1 id="设置打赏模块的样式"><a href="#设置打赏模块的样式" class="headerlink" title="设置打赏模块的样式"></a>设置打赏模块的样式</h1><p>在<code>themes/yelee/source/css/_partial/</code>目录下新建<font color="red">donate.styl</font>文件，其中内容如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.donate_bar</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">5%</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">82px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">82px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif)<span class="built_in">no-repeat</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: background <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: background <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: background <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: background <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: background <span class="number">0s</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">82px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.donate_bar</span> <span class="selector-class">.donate_txt</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#9d9d9d</span>;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">14px</span>/<span class="number">2</span> <span class="string">"Microsoft Yahei"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.donate_bar</span><span class="selector-class">.hidden</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-donate</span>&#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#donate_guide</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">210px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">420px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#donate_guide</span> <span class="selector-tag">img</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>内容填写完成后，记得在<code>themes/yelee/source/css/style.styl</code>中前面部分添加<code>@import &quot;_partial/donate&quot;</code></p>
+<h1 id="将打赏模块整合到文章中"><a href="#将打赏模块整合到文章中" class="headerlink" title="将打赏模块整合到文章中"></a>将打赏模块整合到文章中</h1><p>在<code>themes/yelee/layout/_partial/article.ejs</code>中的<code>&lt;/article&gt;</code>标签后面添加如下内容：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (page.prev || page.next)&#123; %&gt;</span><br><span class="line">   &lt;% <span class="keyword">if</span> (!index &amp;&amp; theme.donate)&#123; %&gt;</span><br><span class="line">     &lt;%- partial(<span class="string">'donate'</span>) %&gt;</span><br><span class="line">   &lt;% &#125; %&gt;</span><br><span class="line"> &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
+<p>即可，至此我们的Yelee模块算是整合完成了，但还需要在<font color="red">主题配置文件</font>中将其进行最后的开启操作。</p>
+<h1 id="主题配置文件开启"><a href="#主题配置文件开启" class="headerlink" title="主题配置文件开启"></a>主题配置文件开启</h1><p>在<code>themes/yelee/_config.yml</code>文件中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启打赏功能</span><br><span class="line">donate: true</span><br><span class="line"># 打赏文案</span><br><span class="line">donate_message: 此文对你有帮助？求支持！1分也是爱~ 谢谢！</span><br></pre></td></tr></table></figure></p>
+<p>这样打赏功能就整合成功。</p>
 </the>
       
     </div>
@@ -360,13 +333,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/08/Yelee主题的打赏整合/">Yelee主题的打赏整合</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-17, 08:58:00</p>
-        <p><span>最后更新:</span>2018-08-08, 16:34:36</p>
+        <p><span>发布时间:</span>2018-08-08, 16:40:00</p>
+        <p><span>最后更新:</span>2018-08-08, 17:13:17</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/17/安装Nginx/" title="VPS与Hexo不得不说的那些事之三——安装Nginx">www.adwardx.top/2018/06/17/安装Nginx/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/17/安装Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/08/Yelee主题的打赏整合/" title="Yelee主题的打赏整合">www.adwardx.top/2018/08/08/Yelee主题的打赏整合/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/08/08/Yelee主题的打赏整合/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -378,16 +351,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/17/安装Hexo/">
-                    VPS与Hexo不得不说的那些事之四——安装Hexo
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/安装Node-js/">
-                    VPS与Hexo不得不说的那些事之二——安装Node.js
+                <a href="/2018/08/05/《PTA——拼题A》之第1009题/">
+                    《PTA——拼题A》之第1009题
                 </a>
             </div>
         
@@ -401,7 +368,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装编译工具及库文件"><span class="toc-number">1.</span> <span class="toc-text">安装编译工具及库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首先要安装-PCRE"><span class="toc-number">2.</span> <span class="toc-text">首先要安装 PCRE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-PCRE-安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载 PCRE 安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包"><span class="toc-number">2.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录"><span class="toc-number">2.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看pcre版本"><span class="toc-number">2.5.</span> <span class="toc-text">查看pcre版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-Nginx"><span class="toc-number">3.1.</span> <span class="toc-text">下载 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包-1"><span class="toc-number">3.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录-1"><span class="toc-number">3.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装-1"><span class="toc-number">3.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Nginx版本"><span class="toc-number">3.5.</span> <span class="toc-text">查看Nginx版本</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#编写打赏模块的代码"><span class="toc-number">1.</span> <span class="toc-text">编写打赏模块的代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置打赏模块的样式"><span class="toc-number">2.</span> <span class="toc-text">设置打赏模块的样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#将打赏模块整合到文章中"><span class="toc-number">3.</span> <span class="toc-text">将打赏模块整合到文章中</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主题配置文件开启"><span class="toc-number">4.</span> <span class="toc-text">主题配置文件开启</span></a></li></ol>
         
     </div>
     <style>
@@ -498,15 +465,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/17/安装Hexo/" title="上一篇: VPS与Hexo不得不说的那些事之四——安装Hexo">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/安装Node-js/" title="下一篇: VPS与Hexo不得不说的那些事之二——安装Node.js">
+            <a href="/2018/08/05/《PTA——拼题A》之第1009题/" title="下一篇: 《PTA——拼题A》之第1009题">
                 <i class="fa fa-angle-right"></i>
             </a>
         

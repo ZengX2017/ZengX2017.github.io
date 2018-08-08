@@ -15,22 +15,20 @@
 
 
 
-<meta name="description" content="本文主要讲述安装Nginx">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="这里存放PTA中出现的由逻辑导致代码大范围出错的问题以及学到的一些新知识">
+<meta name="keywords" content="拼题A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta property="og:url" content="www.adwardx.top/2018/06/17/安装Nginx/index.html">
+<meta property="og:title" content="《PTA——拼题A》之知识集锦">
+<meta property="og:url" content="www.adwardx.top/2018/08/01/《PTA——拼题A》之知识集锦/index.html">
 <meta property="og:site_name" content="Panda没有黑眼圈">
-<meta property="og:description" content="本文主要讲述安装Nginx">
+<meta property="og:description" content="这里存放PTA中出现的由逻辑导致代码大范围出错的问题以及学到的一些新知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/pasted-16.png">
-<meta property="og:image" content="/images/pasted-2.png">
-<meta property="og:image" content="/images/pasted-3.png">
-<meta property="og:updated_time" content="2018-08-08T08:34:36.074Z">
+<meta property="og:image" content="/images/not-smile.png">
+<meta property="og:updated_time" content="2018-08-05T09:20:37.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS与Hexo不得不说的那些事之三——安装Nginx">
-<meta name="twitter:description" content="本文主要讲述安装Nginx">
-<meta name="twitter:image" content="/images/pasted-16.png">
+<meta name="twitter:title" content="《PTA——拼题A》之知识集锦">
+<meta name="twitter:description" content="这里存放PTA中出现的由逻辑导致代码大范围出错的问题以及学到的一些新知识">
+<meta name="twitter:image" content="/images/not-smile.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>VPS与Hexo不得不说的那些事之三——安装Nginx | Panda没有黑眼圈</title>
+<title>《PTA——拼题A》之知识集锦 | Panda没有黑眼圈</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -275,11 +273,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-《PTA——拼题A》之知识集锦" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/17/安装Nginx/" class="article-date">
-      <time datetime="2018-06-17T00:58:00.000Z" itemprop="datePublished">2018-06-17</time>
+      <a href="/2018/08/01/《PTA——拼题A》之知识集锦/" class="article-date">
+      <time datetime="2018-08-01T12:36:00.000Z" itemprop="datePublished">2018-08-01</time>
 </a>
 
 
@@ -294,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      VPS与Hexo不得不说的那些事之三——安装Nginx
+      《PTA——拼题A》之知识集锦
     </h1>
   
 
@@ -304,13 +302,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
+    <a class="article-category-link" href="/categories/PTA/">PTA</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/拼题A/">拼题A</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -320,39 +318,59 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/pasted-16.png" alt="Nginx"><br>本文主要讲述安装<strong>Nginx</strong><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/not-smile.png" alt="not-smile"><br>这里存放PTA中出现的由逻辑导致代码大范围出错的问题以及学到的一些新知识<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="安装编译工具及库文件"><a href="#安装编译工具及库文件" class="headerlink" title="安装编译工具及库文件"></a>安装编译工具及库文件</h1><p> <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
-<h1 id="首先要安装-PCRE"><a href="#首先要安装-PCRE" class="headerlink" title="首先要安装 PCRE"></a>首先要安装 PCRE</h1><p> PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
-<h2 id="下载-PCRE-安装包"><a href="#下载-PCRE-安装包" class="headerlink" title="下载 PCRE 安装包"></a>下载 PCRE 安装包</h2><blockquote>
-<p>下载地址：<br><a href="https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz" target="_blank" rel="noopener">https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</a></p>
-</blockquote>
-<p><code>wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.gz</code><br>为了配合下面Nginx安装，建议在/usr/local/src/目录下下载。</p>
-<h2 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf pcre-8.40.tar.gz</code></p>
-<h2 id="进入安装包目录"><a href="#进入安装包目录" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd pcre-8.40</code></p>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看pcre版本"><a href="#查看pcre版本" class="headerlink" title="查看pcre版本"></a>查看pcre版本</h2><p><code>pcre-config --version</code><br><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h1 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h1><h2 id="下载-Nginx"><a href="#下载-Nginx" class="headerlink" title="下载 Nginx"></a>下载 Nginx</h2><blockquote>
-<p>下载地址：<br><a href="http://nginx.org/download/nginx-1.14.0.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.14.0.tar.gz</a></p>
-</blockquote>
-<p><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code></p>
-<h2 id="解压安装包-1"><a href="#解压安装包-1" class="headerlink" title="解压安装包"></a>解压安装包</h2><p><code>tar zxvf nginx-1.14.0.tar.gz</code></p>
-<h2 id="进入安装包目录-1"><a href="#进入安装包目录-1" class="headerlink" title="进入安装包目录"></a>进入安装包目录</h2><p><code>cd nginx-1.14.0</code></p>
-<h2 id="编译安装-1"><a href="#编译安装-1" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.40</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="查看Nginx版本"><a href="#查看Nginx版本" class="headerlink" title="查看Nginx版本"></a>查看Nginx版本</h2><p><code>/usr/local/webserver/nginx/sbin/nginx -v</code></p>
-<p><img src="/images/pasted-3.png" alt="upload successful"></p>
-<p>到此，Nginx安装完成。</p>
-<p>nginx启动命令</p>
-<pre>/usr/local/webserver/nginx/sbin/nginx</pre>
+<h1 id="1048题"><a href="#1048题" class="headerlink" title="1048题"></a>1048题</h1><p>本题要求实现一种数字加密方法。首先固定一个加密用正整数A，对任一正整数B，将其每1位数字与A的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对13取余——这里用J代表10、Q代表11、K代表12；对偶数位，用B的数字减去A的数字，若结果为负数，则再加10。这里令个位为第1位。<br><strong>输入格式：</strong><br>输入在一行中依次给出A和B，均为不超过100位的正整数，其间以空格分隔。<br><strong>输出格式：</strong><br>在一行中输出加密后的结果。<br><strong>输入样例：</strong></p>
+<pre>
+1234567 368782971
+</pre>
+<strong>输出样例：</strong>
+<pre>3695Q8118</pre>
 
-<blockquote>
-<p>参考文章：</p>
-<ol>
-<li><a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/linux/nginx-install-setup.html</a></li>
-</ol>
-</blockquote>
-</the>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>由于在实际编码中只使用了2组数组，将结果保存在一个数组中。万万没想到，<font color="red">对数组同时进行存储和更新操作是不可行的。应新建数组空间对其进行存储。</font></p>
+<h1 id="1064题"><a href="#1064题" class="headerlink" title="1064题"></a>1064题</h1><p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
+<p><strong>输入格式：</strong><br>输入第一行给出正整数 N。随后一行给出 N 个正整数，数字间以空格分隔。题目保证所有数字小于10的4次方。</p>
+<p><strong>输出格式：</strong><br>首先第一行输出给定数字中不同的朋友证号的个数；随后一行按递增顺序输出这些朋友证号，数字间隔一个空格，且行末不得有多余空格。</p>
+<p><strong>输入样例：</strong></p>
+<pre>
+8
+123 899 51 998 27 33 36 12
+</pre>
+<strong>输出样例：</strong>
+<pre>
+4
+3 6 9 26
+</pre>
+
+<h2 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h2><p>就目前我所掌握的知识来说，<font color="red">在使用循环的输入过程中输入多个带空格的值存储在数组中特别棘手，</font>经查阅资料后发现，<font color="red">使用getchar()去判断输入中是否带有空格可以解除这个麻烦。</font>代码如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; N; ++i)&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, numArray);</span><br><span class="line">    sumcount = allSum(count, numArray);</span><br><span class="line">    <span class="keyword">if</span>(getchar() == <span class="string">' '</span>)&#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="1005题"><a href="#1005题" class="headerlink" title="1005题"></a>1005题</h1><p>卡拉兹(Callatz)猜想已经在1001中给出了描述。在这个题目里，情况稍微有些复杂。<br>当我们验证卡拉兹猜想的时候，为了避免重复计算，可以记录下递推过程中遇到的每一个数。例如对n=3进行验证的时候，我们需要计算3、5、8、4、2、1，则当我们对n=5、8、4、2进行验证的时候，就可以直接判定卡拉兹猜想的真伪，而不需要重复计算，因为这4个数已经在验证3的时候遇到过了，我们称5、8、4、2是被3“覆盖”的数。我们称一个数列中的某个数n为“关键数”，如果n不能被数列中的其他数字所覆盖。</p>
+<p>现在给定一系列待验证的数字，我们只需要验证其中的几个关键数，就可以不必再复验证余下的数字。你的任务就是找出这些关键数字，并按从大到小的顺序输出它们。</p>
+<p><strong>输入格式：</strong>每个测试输入包含1个测试用例，第1行给出一个正整数K(&amp;lt100)，第2行给出K个互不相同的待验证的正整数n(1&amp;ltn&lt;=100)的值，数字间用空格隔开。</p>
+<p><strong>输出格式：</strong>每个测试用例的输出占一行，按从大到小的顺序输出关键数字。数字间用1个空格隔开，但一行中最后一个数字后没有空格。</p>
+<p><strong>输入样例：</strong></p>
+<pre>
+6
+3 5 6 7 8 11
+</pre>
+<strong>输出样例：</strong>
+<pre>
+7 6
+</pre>
+
+<h2 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h2><p>思路是开辟2个数组，一个存储数字下标默认设置为0（<font color="red">从1开始</font>），若为1则表示此数字不被覆盖，否则说明此数字被覆盖。之前使用递推导致出现调用空间栈太多，故<font color="red">转递归为迭代</font>。主要代码如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">   tag = position[i];</span><br><span class="line">   <span class="keyword">while</span>(tag!=<span class="number">0</span> &amp;&amp; tag!=<span class="number">1</span>)&#123;</span><br><span class="line">       <span class="keyword">if</span>(tag%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">         tag = tag/<span class="number">2</span>;</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">         tag = (<span class="number">3</span>*tag+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">       <span class="keyword">if</span>(tag&lt;=<span class="number">100</span>)</span><br><span class="line">         cover[tag]=<span class="number">0</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="1010题"><a href="#1010题" class="headerlink" title="1010题"></a>1010题</h1><p>设计函数求一元多项式的导数。（注：x<sup>n</sup>，n为整数）的一阶导数为n*x<sup>n-1</sup>。）</p>
+<p><strong>输入格式：</strong>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。</p>
+<p><strong>输出格式：</strong>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。注意“零多项式”的指数和系数都是0，但是表示为“0 0”。</p>
+<p><strong>输入样例：</strong></p>
+<pre>
+3 4 -5 2 6 1 -2 0</pre>
+<strong>输出样例：</strong>
+<pre>
+12 3 -10 1 6 0</pre>
+
+<h2 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h2><p>注意指数为0或者系数为0的情况，即<font color="red">zs*xs = 0</font>以及<font color="red">0多项式的情况</font>。主要代码如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b)!=EOF)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span> (a * b!=<span class="number">0</span>)&#123;</span><br><span class="line">      <span class="keyword">if</span> (flag!=<span class="number">0</span>)</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a*b,b<span class="number">-1</span>);</span><br><span class="line">      flag++;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> (flag==<span class="number">0</span>)</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"0 0"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<font color="red">其中下面这段代码最值得推敲，</font><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b)!=EOF)</span><br></pre></td></tr></table></figure><br><br>scanf函数返回的是输入的数据的个数,什么都不输入代表-1<br>在scanf(“%d %d”,&amp;a,&amp;b) != EOF 中如果输入两个数字那么scanf函数会返回一个2，如果输入结束，那么scanf函数返回-1。因为-1 == -1，所以循环终止。<br><br><br># <h1>1012题</h1><br>给定一系列正整数，请按要求对数字进行分类，并输出以下5个数字：<br><br>A1 = 能被5整除的数字中所有偶数的和；<br><br>A2 = 将被5除后余1的数字按给出顺序进行交错求和，即计算n1-n2+n3-n4…；<br><br>A3 = 被5除后余2的数字的个数；<br><br>A4 = 被5除后余3的数字的平均数，精确到小数点后1位；<br><br>A5 = 被5除后余4的数字中最大数字。<br><br><strong>输入格式：</strong><br><br>每个输入包含1个测试用例。每个测试用例先给出一个不超过1000的正整数N，随后给出N个不超过1000的待分类的正整数。数字间以空格分隔。<br><br><strong>输出格式：</strong><br><br>对给定的N个正整数，按题目要求计算A1~A5并在一行中顺序输出。数字间以空格分隔，但行末不得有多余空格。<br><br>若其中某一类数字不存在，则在相应位置输出“N”。<br><br><strong>输入样例1：</strong><br><pre><br>13 1 2 3 4 5 6 7 8 9 10 20 16 18</pre><br><strong>输出样例1：</strong><br><pre><br>30 11 2 9.7 9</pre><br><strong>输入样例2：</strong><br><pre><br>8 1 2 4 5 6 7 9 16</pre><br><strong>输出样例2：</strong><br><pre><br>N 11 2 N 9</pre><br><h2>分析</h2><br><font color="red">一个含有5个元素的数组足矣实现本题功能</font></the>
       
     </div>
     
@@ -360,13 +378,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/01/《PTA——拼题A》之知识集锦/">《PTA——拼题A》之知识集锦</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
-        <p><span>发布时间:</span>2018-06-17, 08:58:00</p>
-        <p><span>最后更新:</span>2018-08-08, 16:34:36</p>
+        <p><span>发布时间:</span>2018-08-01, 20:36:00</p>
+        <p><span>最后更新:</span>2018-08-05, 17:20:37</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/17/安装Nginx/" title="VPS与Hexo不得不说的那些事之三——安装Nginx">www.adwardx.top/2018/06/17/安装Nginx/</a>
-            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/06/17/安装Nginx/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/01/《PTA——拼题A》之知识集锦/" title="《PTA——拼题A》之知识集锦">www.adwardx.top/2018/08/01/《PTA——拼题A》之知识集锦/</a>
+            <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/08/01/《PTA——拼题A》之知识集锦/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -379,15 +397,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/17/安装Hexo/">
-                    VPS与Hexo不得不说的那些事之四——安装Hexo
+                <a href="/2018/08/04/《PTA——拼题A》之第1014题/">
+                    《PTA——拼题A》之第1014题
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/06/17/安装Node-js/">
-                    VPS与Hexo不得不说的那些事之二——安装Node.js
+                <a href="/2018/08/01/《PTA——拼题A》之第1081题/">
+                    《PTA——拼题A》之第1081题
                 </a>
             </div>
         
@@ -401,7 +419,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装编译工具及库文件"><span class="toc-number">1.</span> <span class="toc-text">安装编译工具及库文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首先要安装-PCRE"><span class="toc-number">2.</span> <span class="toc-text">首先要安装 PCRE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-PCRE-安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载 PCRE 安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包"><span class="toc-number">2.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录"><span class="toc-number">2.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看pcre版本"><span class="toc-number">2.5.</span> <span class="toc-text">查看pcre版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Nginx"><span class="toc-number">3.</span> <span class="toc-text">安装 Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-Nginx"><span class="toc-number">3.1.</span> <span class="toc-text">下载 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压安装包-1"><span class="toc-number">3.2.</span> <span class="toc-text">解压安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入安装包目录-1"><span class="toc-number">3.3.</span> <span class="toc-text">进入安装包目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装-1"><span class="toc-number">3.4.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Nginx版本"><span class="toc-number">3.5.</span> <span class="toc-text">查看Nginx版本</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1048题"><span class="toc-number">1.</span> <span class="toc-text">1048题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">1.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1064题"><span class="toc-number">2.</span> <span class="toc-text">1064题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分析-1"><span class="toc-number">2.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1005题"><span class="toc-number">3.</span> <span class="toc-text">1005题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分析-2"><span class="toc-number">3.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1010题"><span class="toc-number">4.</span> <span class="toc-text">1010题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分析-3"><span class="toc-number">4.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">1012题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.</span> <span class="toc-text">分析</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -498,7 +516,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/17/安装Hexo/" title="上一篇: VPS与Hexo不得不说的那些事之四——安装Hexo">
+            <a href="/2018/08/04/《PTA——拼题A》之第1014题/" title="上一篇: 《PTA——拼题A》之第1014题">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -506,7 +524,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/06/17/安装Node-js/" title="下一篇: VPS与Hexo不得不说的那些事之二——安装Node.js">
+            <a href="/2018/08/01/《PTA——拼题A》之第1081题/" title="下一篇: 《PTA——拼题A》之第1081题">
                 <i class="fa fa-angle-right"></i>
             </a>
         
