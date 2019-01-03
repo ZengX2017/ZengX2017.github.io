@@ -24,7 +24,7 @@
 <meta property="og:description" content="Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/images/dashang.png">
-<meta property="og:updated_time" content="2018-08-08T09:13:17.098Z">
+<meta property="og:updated_time" content="2018-08-08T09:15:02.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yelee主题的打赏整合">
 <meta name="twitter:description" content="Yelee主题是不自带打赏功能的，本文将给出Yelee主题接入打赏模块的操作">
@@ -211,6 +211,8 @@
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
+                      <a class="main-nav-link switch-friends-link" href="https://bluemrd.github.io/archives/">Blue&#39;s Blog</a>
+                    
                     </div>
                 </section>
                 
@@ -324,7 +326,7 @@
 <h1 id="将打赏模块整合到文章中"><a href="#将打赏模块整合到文章中" class="headerlink" title="将打赏模块整合到文章中"></a>将打赏模块整合到文章中</h1><p>在<code>themes/yelee/layout/_partial/article.ejs</code>中的<code>&lt;/article&gt;</code>标签后面添加如下内容：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (page.prev || page.next)&#123; %&gt;</span><br><span class="line">   &lt;% <span class="keyword">if</span> (!index &amp;&amp; theme.donate)&#123; %&gt;</span><br><span class="line">     &lt;%- partial(<span class="string">'donate'</span>) %&gt;</span><br><span class="line">   &lt;% &#125; %&gt;</span><br><span class="line"> &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
 <p>即可，至此我们的Yelee模块算是整合完成了，但还需要在<font color="red">主题配置文件</font>中将其进行最后的开启操作。</p>
 <h1 id="主题配置文件开启"><a href="#主题配置文件开启" class="headerlink" title="主题配置文件开启"></a>主题配置文件开启</h1><p>在<code>themes/yelee/_config.yml</code>文件中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启打赏功能</span><br><span class="line">donate: true</span><br><span class="line"># 打赏文案</span><br><span class="line">donate_message: 此文对你有帮助？求支持！1分也是爱~ 谢谢！</span><br></pre></td></tr></table></figure></p>
-<p>这样打赏功能就整合成功。</p>
+<p>这样打赏功能就整合成功了。</p>
 </the>
       
     </div>
@@ -336,7 +338,7 @@
         <p><span>本文标题:</span><a href="/2018/08/08/Yelee主题的打赏整合/">Yelee主题的打赏整合</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Adward Zeng</a></p>
         <p><span>发布时间:</span>2018-08-08, 16:40:00</p>
-        <p><span>最后更新:</span>2018-08-08, 17:13:17</p>
+        <p><span>最后更新:</span>2018-08-08, 17:15:02</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/08/08/Yelee主题的打赏整合/" title="Yelee主题的打赏整合">www.adwardx.top/2018/08/08/Yelee主题的打赏整合/</a>
             <span class="copy-path" data-clipboard-text="原文: www.adwardx.top/2018/08/08/Yelee主题的打赏整合/　　作者: Adward Zeng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -350,6 +352,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/01/03/《2019-01-03》新的一年继续/">
+                    《2019-01-03》新的一年继续
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -465,7 +473,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/01/03/《2019-01-03》新的一年继续/" title="上一篇: 《2019-01-03》新的一年继续">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -477,7 +487,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/Yelee主题的打赏整合/">Yelee主题的打赏整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/《PTA——拼题A》之第1009题/">《PTA——拼题A》之第1009题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1008题/">《PTA——拼题A》之第1008题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1014题/">《PTA——拼题A》之第1014题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之知识集锦/">《PTA——拼题A》之知识集锦</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之第1081题/">《PTA——拼题A》之第1081题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/31/《PTA——拼题A》刷1004题有感/">《PTA——拼题A》之第1004题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/《福利》bilibili免流版/">《福利》bilibili免流版</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/">嘿，我们都在这里——一些小问题解决合辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/13/复习之碎碎念/">复习之碎碎念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/04/考研复习计划与进程/">考研复习计划与进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/毕业不说再见——继续努力/">毕业不说再见——继续努力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/26/从入门到放弃之——Nginx/">从入门到放弃之——Nginx学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/你好，来必力/">新成员你好——来必力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/一些Tips/">一些Tips</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/To-do-list/">To do list</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Hexo/">VPS与Hexo不得不说的那些事之四——安装Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Node-js/">VPS与Hexo不得不说的那些事之二——安装Node.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Git/">VPS与Hexo不得不说的那些事之一——安装Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/搭建Hexo/">VPS与Hexo不得不说的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/idea一些操作（个人记录）/">idea一些操作（个人记录）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/03/《2019-01-03》新的一年继续/">《2019-01-03》新的一年继续</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/Yelee主题的打赏整合/">Yelee主题的打赏整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/《PTA——拼题A》之第1009题/">《PTA——拼题A》之第1009题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1008题/">《PTA——拼题A》之第1008题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/《PTA——拼题A》之第1014题/">《PTA——拼题A》之第1014题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之知识集锦/">《PTA——拼题A》之知识集锦</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/《PTA——拼题A》之第1081题/">《PTA——拼题A》之第1081题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/31/《PTA——拼题A》刷1004题有感/">《PTA——拼题A》之第1004题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/《福利》bilibili免流版/">《福利》bilibili免流版</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/14/嘿，我们都在这里——一些小问题解决合辑/">嘿，我们都在这里——一些小问题解决合辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/04/考研复习计划与进程/">考研复习计划与进程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/毕业不说再见——继续努力/">毕业不说再见——继续努力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/26/从入门到放弃之——Nginx/">从入门到放弃之——Nginx学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/你好，来必力/">新成员你好——来必力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/一些Tips/">一些Tips</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/To-do-list/">To do list</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/VPS与Hexo不得不说的那些事之五——其他配置/">VPS与Hexo不得不说的那些事之五——其他配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Hexo/">VPS与Hexo不得不说的那些事之四——安装Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Nginx/">VPS与Hexo不得不说的那些事之三——安装Nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Node-js/">VPS与Hexo不得不说的那些事之二——安装Node.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/安装Git/">VPS与Hexo不得不说的那些事之一——安装Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/搭建Hexo/">VPS与Hexo不得不说的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/idea一些操作（个人记录）/">idea一些操作（个人记录）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/BootStrap，使用过程中的一些get点（个人向）/">BootStrap，使用过程中的一些get点（个人向）</a></li></ul>
 
 
 
@@ -492,7 +502,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2018 Adward Zeng
+                2018-2019 Adward Zeng
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
