@@ -3,10 +3,31 @@
   
     
     <entry>
+      <title>《PTA——拼题A》之第1011题</title>
+      <link href="/2019/01/04/%E3%80%8APTA%E2%80%94%E2%80%94%E6%8B%BC%E9%A2%98A%E3%80%8B%E4%B9%8B%E7%AC%AC1011%E9%A2%98/"/>
+      <url>/2019/01/04/%E3%80%8APTA%E2%80%94%E2%80%94%E6%8B%BC%E9%A2%98A%E3%80%8B%E4%B9%8B%E7%AC%AC1011%E9%A2%98/</url>
+      <content type="html"><![CDATA[<p><excpert in="" index="" |="" 首页摘要=""><br>  如题<a id="more"></a></excpert></p><the rest="" of="" content="" |="" 余下全文=""><h1 id="题目介绍"><a href="#题目介绍" class="headerlink" title="题目介绍"></a>题目介绍</h1><p>给定区间[−2^31, 2^31] 内的 3 个整数 A、B 和 C，请判断 A+B 是否大于 C。</p><p><strong>输入格式：</strong>输入第 1 行给出正整数 T (≤10)，是测试用例的个数。随后给出 T 组测试用例，每组占一行，顺序给出 A、B 和 C。整数间以空格分隔。</p><p><strong>输出格式：</strong>对每组测试用例，在一行中输出 Case #X: true 如果 A+B&gt;C，否则输出 Case #X: false，其中 X 是测试用例的编号（从 1 开始）。</p><p><strong>输入样例：</strong></p><pre>41 2 32 3 42147483647 0 21474836460 -2147483648 -2147483647</pre><strong>输出样例：</strong><pre>Case #1: falseCase #2: trueCase #3: trueCase #4: false</pre><h1 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> T , tcase = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">  <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> a, b, c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">    <span class="keyword">if</span>(a + b &gt; c)&#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"Case #%d: true\n"</span>, tcase++);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"Case #%d: false\n"</span>, tcase++);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>此题出现的错误为：<font color="red">数据范围和ld格式用的比较少</font></p><h2 id="新的知识"><a href="#新的知识" class="headerlink" title="新的知识"></a>新的知识</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br></pre></td></tr></table></figure><blockquote><p>cstdio是将stdio.h的内容用C++头文件的形式表示出来。用c++编译器编译</p></blockquote></the>]]></content>
+      
+      <categories>
+          
+          <category> 拼题A </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PTA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>《2019-01-03》新的一年继续</title>
       <link href="/2019/01/03/%E3%80%8A2019-01-03%E3%80%8B%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E7%BB%A7%E7%BB%AD/"/>
       <url>/2019/01/03/%E3%80%8A2019-01-03%E3%80%8B%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E7%BB%A7%E7%BB%AD/</url>
-      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/new_year_2019.png" width="30%"><br>2019考研已于2018年12月23日下午5点正式结束，考多少算多少。接下来规划一下短期计划。<br><a id="more"></a></excerpt></p><the rest="" of="" contents="" |="" 余下全文=""><h1 id="PAT甲级"><a href="#PAT甲级" class="headerlink" title="PAT甲级"></a>PAT甲级</h1><h1 id="北京工业大学复试"><a href="#北京工业大学复试" class="headerlink" title="北京工业大学复试"></a>北京工业大学复试</h1><h1 id="做一个全网解析VIP的网址"><a href="#做一个全网解析VIP的网址" class="headerlink" title="做一个全网解析VIP的网址"></a>做一个全网解析VIP的网址</h1><h1 id="做一个小程序"><a href="#做一个小程序" class="headerlink" title="做一个小程序"></a>做一个小程序</h1><blockquote><p>看起来这么几个字而已，接下来要花很大的时间了==</p></blockquote></the>]]></content>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><img src="/images/new_year_2019.png" width="30%"><br>2019考研已于2018年12月23日下午5点正式结束，考多少算多少。接下来规划一下短期计划。<br><a id="more"></a></excerpt></p><the rest="" of="" contents="" |="" 余下全文=""><h1 id="PAT甲级"><a href="#PAT甲级" class="headerlink" title="PAT甲级"></a>PAT甲级</h1><h1 id="北京工业大学复试"><a href="#北京工业大学复试" class="headerlink" title="北京工业大学复试"></a>北京工业大学复试</h1><h1 id="做一个全网解析VIP的网址"><a href="#做一个全网解析VIP的网址" class="headerlink" title="做一个全网解析VIP的网址"></a>做一个全网解析VIP的网址</h1><blockquote><p>于2019年1月4日 18点43分大部分完成</p></blockquote><h1 id="做一个小程序"><a href="#做一个小程序" class="headerlink" title="做一个小程序"></a>做一个小程序</h1><blockquote><p>看起来这么几个字而已，接下来要花很大的时间了==</p></blockquote></the>]]></content>
       
       
         <tags>
