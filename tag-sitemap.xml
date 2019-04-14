@@ -58,13 +58,6 @@
     </url>
 
     <url>
-        <loc>www.adwardx.top/tags/Nginx/</loc>
-        <lastmod>2018-08-08T08:34:36.074Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>www.adwardx.top/tags/%E7%A6%8F%E5%88%A9/</loc>
         <lastmod>2018-08-08T08:35:38.340Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,13 +67,6 @@
     <url>
         <loc>www.adwardx.top/tags/Tips/</loc>
         <lastmod>2018-08-08T08:46:20.510Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>www.adwardx.top/tags/%E8%80%83%E7%A0%94/</loc>
-        <lastmod>2018-09-01T09:19:59.234Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -107,8 +93,29 @@
     </url>
 
     <url>
+        <loc>www.adwardx.top/tags/Nginx/</loc>
+        <lastmod>2019-03-02T03:30:04.906Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>www.adwardx.top/tags/PTA/</loc>
-        <lastmod>2019-02-12T14:40:52.378Z</lastmod>
+        <lastmod>2019-03-04T13:30:26.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.adwardx.top/tags/%E8%80%83%E7%A0%94/</loc>
+        <lastmod>2019-03-21T13:29:27.546Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.adwardx.top/tags/%E6%89%93%E5%8D%A1/</loc>
+        <lastmod>2019-04-03T09:42:01.393Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
